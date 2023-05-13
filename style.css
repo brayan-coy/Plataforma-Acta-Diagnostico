@@ -80,6 +80,28 @@
   }
 }
 
+/* Adaptacion al celular  */
+@media screen and (max-width: 480px) {
+  /* Aplicar estilos cuando la pantalla es más pequeña que 480px */
+
+  #consulta {
+    width: 100%;
+  }
+
+  #consulta td {
+    display: block;
+    text-align: left;
+    padding: 5px;
+  }
+
+  #consulta td:before {
+    content: attr(data-th);
+    font-weight: bold;
+    display: inline-block;
+    width: 80px;
+  }
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
