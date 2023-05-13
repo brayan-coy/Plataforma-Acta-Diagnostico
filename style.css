@@ -1,10 +1,92 @@
+#consulta {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#cedulaAsociado::placeholder {
+  font-size: 12px; /* Elige el tamaño que desees */
+}
+
+#consulta td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#consulta tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#consulta tr:hover {
+  background-color: #ddd;
+}
+
+#consulta h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+#consulta label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#consulta input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+#consulta button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+}
+
+#consulta button:hover {
+  background-color: #3e8e41;
+}
+
+#consulta td:first-child {
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  #consulta td {
+    display: block;
+    text-align: center;
+  }
+
+  #consulta td:first-child {
+    width: 100%;
+  }
+
+  #consulta input[type="text"] {
+    width: 100%;
+  }
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   border-collapse: collapse;
 }
 
@@ -37,6 +119,10 @@ select {
   padding: 5px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 button {
@@ -93,7 +179,7 @@ form button {
   border-radius: 4px;
 }
 
-#cedulaAsociado {
+/* #cedulaAsociado {
   width: 20%;
   background-color: #f5f5f5;
   border: 1px solid #ddd;
@@ -117,7 +203,7 @@ input:focus {
   font-size: 14px;
   text-align: center;
 }
-
+ */
 /* --------- Datos pintados de la primera tabla */
 
 table#tabla-datos td:nth-child(1) {
