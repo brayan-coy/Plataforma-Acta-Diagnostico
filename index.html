@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Acta de diagnóstico</title>
+    <link rel="stylesheet" href="style.css">
+   
+
+    
+   <!--  <script src="main.js"></script>
+ -->
+  </head>
+  <body>
+
+    <table id="consulta">
+      <tr>
+        <td colspan="2"><h2>Acta diagnostico</h2></td>       
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td><label>Consultar usuario </label><br><br><br>
+        <input type="text" id="cedulaAsociado" placeholder="Ingrese Cedula"><br><br><br>
+        <button>Conultar</button><br><br></td>
+      
+      </tr>
+      <tr>
+        <td><label>Agregar Asociado </label><br><br><br>
+        <button>Agrgar Asociado</button><br><br><br></td>
+      </tr>
+      <tr>
+        <td><label>Consultas</label><br><br>
+        <button>Consultar</button></td>
+      </tr>
+    </table><br><br><br><br><br><br>
+    
+       
+
+
+<!-- Primera tabla de Datos personales del asociado -->
+
+<form> 
+    <table id="tabla-datos">
+      <thead>
+        <tr>
+          <td colspan="2"><h2>Datos personales del asociado</h2></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="nombres">Nombres:</label></td>
+          <td><input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres"></td>
+        </tr>
+        <tr>
+          <td><label for="apellidos">Apellidos:</label></td>
+          <td><input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos"></td>
+        </tr>
+        <tr>
+          <td>Genero</td>
+          <td>
+            <input type="radio">Femenino</input>
+            <input type="radio">Masculino</input>
+      </tr>
+
+        <tr>
+
+          <td><label for="cedula">Número de cédula:</label></td>
+          <td><input type="text" id="cedula" name="cedula" placeholder="Ingrese su número de cédula"></td>
+        </tr>
+        <tr>
+          <td><label for="celular">Número de celular:</label></td>
+          <td><input type="text" id="celular" name="celular" placeholder="Ingrese su número de celular"></td>
+        </tr>
+        <tr>
+          <td><label for="codigo_catastral">Código catastral:</label></td>
+          <td><input type="text" id="codigo_catastral" name="codigo_catastral" placeholder="Ingrese su código catastral"></td>
+        </tr>
+        <tr>
+          <td><label for="correo_electronico">Correo electrónico:</label></td>
+          <td><input type="email" id="correo_electronico" name="correo_electronico" placeholder="Ingrese su correo electrónico"></td>
+        </tr>
+        <tr>
+          <td><label for="nivel_educativo">Nivel educativo:</label></td>
+          <td>
+            <select id="nivel_educativo" name="nivel_educativo">
+              <option>Seleccionar</option>
+              <option value="ninguno">No tiene estudios</option>
+              <option value="bachiller">Bachiller</option>
+              <option value="tecnologo">Tecnólogo</option>
+              <option value="universitario">Universitario</option>
+              <option value="doctorado">Doctorado</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="profesion">Profesión:</label></td>
+          <td><input type="text" id="profesion" name="profesion" placeholder="Ingrese su profesión"></td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+    </table><br>
+   
+   
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+
+
+ <form>  <!--    //////////////////7  2 TABLA DE ACTA DE DIAGNOSTICO -->
+  <table id="Acta-diagnostico" >
+    
+    <th colspan="2"><h2>Acta diagnostico</h2></th>
+       
+        <tr>
+          
+          <th>Fecha</th>
+          <td><input type="date" name="fecha"></td>
+        </tr>
+       
+        <tr>
+          <th>Tipo de visita</th>
+          <td>
+            <select name="convencional">
+              <option value="t1">Seleccionar</option>
+              <option value="Implentacion">Implentacion</option>
+              <option value="Seguimiento">Seguimiento</option>
+              <option value="Solicitud">Solicitud</option>
+              <option value="Otro">Otro</option>
+              
+            </select>
+          </td>
+
+
+        <tr>
+          <th>Estatus del predio</th>
+          <td>
+            <select name="convencional">
+              <option value="t1">Seleccionar</option>
+              <option value="t1">Convesional</option>
+              <option value="t1">T1</option>
+              <option value="t2">T2</option>
+              <option value="t3">T3</option>
+              <option value="Organico">Organico</option>
+              
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Tema tratado</th>
+          <td><textarea name="tema_tratado" placeholder="Ingrese el tema tratado"></textarea></td>
+        </tr>
+      </form>
+
+      </table><br><br<br>
+
+
+<!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
+
+        <!-- ///TABLA DE DATOS DE LA FINCA -->
+        
+        <table id="datos-finca">
+          <thead>
+            <tr>
+              <th colspan="1"><h2>Datos de la finca</h2></th>
+            </tr>
+          </thead>
+          <tbody>
+           
+              <!--  prueba inpus inicio-->
+              <table>
+                <tr>
+                  <th>Finca</th>
+                  <td><input type="text" id="finca" placeholder="Nombre de la finca"></td>
+                </tr>
+                <tr>
+                  <th>Vereda</th>
+                  <td><input type="text" id="vereda" placeholder="Nombre de la vereda"></td>
+                </tr>
+                <tr>
+                  <th>Municipio</th>
+                  <td>
+                    <select id="ciudades" name="ciudades">
+                      <option >Seleccione</option>
+                      <option value="Armenia">Armenia</option>
+                      <option value="Buenavista">Buenavista</option>
+                      <option value="Calarca">Calarca</option>
+                      <option value="Circacia">Circacia</option>
+                      <option value="Cordoba">Córdoba</option>
+                      <option value="Filandia">Filandia</option>
+                      <option value="Genova">Génova</option>
+                      <option value="LaTebaida">La Tebaida</option>
+                      <option value="Montenegro">Montenegro</option>
+                      <option value="Pijao">Pijao</option>
+                      <option value="Quimbaya">Quimbaya</option>
+                      <option value="Salento">Salento</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+              
+                
+<!-- Datos lotes tabla---------------------------------------------------------------------------- -->
+
+
+
+<table id="tabla-especies">
+  <h2>informacion</h2>
+  <thead>          
+    <tr>
+      <th>Lotes</th>
+      <th>Planta</th>
+      <th>surco</th>
+      <th>Numero de arboles</th>
+      <th>Area</th>
+      <th>% Sombra</th>
+      <th>%pendiente</th>
+    </tr>
+  </thead>
+  <tbody>                   
+    <tr>
+      <td><input type="text" placeholder="Lotes"/></td>
+      <td><input type="number" placeholder="Distancia" /></td>
+      <td><input type="number"  placeholder="Planta surco"/></td>
+      <td><input type="number"  placeholder="%"/></td>
+      <td><input type="number"  placeholder="area"/></td>
+      <td><input type="number"  placeholder="% sombra"/></td>
+      <td><input type="number"  placeholder="Pendiente"/></td>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="Lotes"/></td>
+      <td><input type="number" placeholder="Distancia" /></td>
+      <td><input type="number"  placeholder="Planta surco"/></td>
+      <td><input type="number"  placeholder="%"/></td>
+      <td><input type="number"  placeholder="area"/></td>
+      <td><input type="number"  placeholder="% sombra"/></td>
+      <td><input type="number"  placeholder="Pendiente"/></td>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="Lotes"/></td>
+      <td><input type="number" placeholder="Distancia" /></td>
+      <td><input type="number"  placeholder="Planta surco"/></td>
+      <td><input type="number"  placeholder="%"/></td>
+      <td><input type="number"  placeholder="area"/></td>
+      <td><input type="number"  placeholder="% sombra"/></td>
+      <td><input type="number"  placeholder="Pendiente"/></td>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="Lotes"/></td>
+      <td><input type="number" placeholder="Distancia" /></td>
+      <td><input type="number"  placeholder="Planta surco"/></td>
+      <td><input type="number"  placeholder="%"/></td>
+      <td><input type="number"  placeholder="area"/></td>
+      <td><input type="number"  placeholder="% sombra"/></td>
+      <td><input type="number"  placeholder="Pendiente"/></td>
+    </tr>
+    <tr>
+      <td><input type="text" placeholder="Lotes"/></td>
+      <td><input type="number" placeholder="Distancia" /></td>
+      <td><input type="number"  placeholder="Planta surco"/></td>
+      <td><input type="number"  placeholder="%"/></td>
+      <td><input type="number"  placeholder="area"/></td>
+      </tr      
+    </table>
+
+
+<!-- Otra campo tabla finca -------------------------------------------------------------------------- -->
+<table width="80%">
+  <tr>
+    <th>Descripción</th>
+    <th>Ingrese</th>
+  </tr>
+  <tr>
+    <td>Área de alto valor de conservación</td>
+    <td><input type="number" id="altoValor" placeholder="Area total conservacion"></td>
+  </tr>
+  <tr>
+    <td>Área social</td>
+    <td><input type="number" id="areaSocial" placeholder="Area social"></td>
+  </tr>
+  <tr>
+    <td>Área total</td>
+    <td><input type="number" id="areaTotal" placeholder="Area total"></td>
+  </tr>
+  <tr>
+    <td>Producción en arrobas</td>
+    <td><input type="number" id="produccion" placeholder="Produccion en arrobas"></td>
+  </tr>
+</table>
+        </table>
+        
+<!-- ------------------------------------------------------------------------------------------------------ -->
+      <!-- TABLA DE MUNICIPIO  -->
+
+      <h2>Otros cultivos</h2>
+
+      <table id="tabla-municipio">        
+          <td>
+            <h2 for="cultivo">Cultivo</h2><br><br>
+            
+            
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+    
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+            
+            
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+            
+            
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+            
+            
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+            
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+            
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+            
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+          </td>
+          <td>
+            <h2 for="distancia-siembra">Planta</h2>
+              
+            </select><br><br>
+
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+
+          </td>
+
+          <td>
+            <h2 for="distancia-siembra">Surco</h2>
+              
+            </select><br><br>
+
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+
+          </td>
+
+          <td>
+            <h2 for="num-arboles">Numero de arboles</h2>
+          
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+          
+          
+          </td>
+          <td>
+            <h2 for="area-arboles">Area</h2><br><br>
+            <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles">
+          </td>
+          <td>
+         
+            <h2 for="produccion">Producción</h2
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>    
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+          </td>
+            
+          </td>
+          <td>
+            <h2 for="area-total">Area total otros cultivos</h2><br><br><br><br><br>
+            <input type="number" id="area-total" name="area-total" placeholder="Area total cultivos">
+          </td>
+        </tr>
+      </table><br>
+      
+      
+      
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+
+   <!-- TABLA DE VARIEDADES -->  
+      <table id="tabla-variedades">
+        <tr>
+          <th>Variedades</th>
+          <td>
+           <input type="text" placeholder="Variedades">
+          </td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+          <th>Se tiene algun proceso de cafe</th>
+          <td>
+            <input type="radio" name="proceso" value="naturales">Naturales
+            <input type="radio" name="proceso" value="honey">Honey
+            <input type="radio" name="proceso" value="naturales">Fermentacion controlada
+            <input type="radio" name="proceso" value="honey">Lavado tradicional
+            
+          </td>
+        </tr>
+        <tr>
+          <th>Cuenta con mapa de la finca</th>
+          <td>
+          
+              <input type="radio">Sí</input>
+              <input type="radio">No</input>
+          
+          </td>
+        </tr>
+        <tr>
+          <th>Fermentación controlada</th>
+          <td>
+            <input type="radio">Sí</input>
+            <input type="radio">No</input>
+        
+          </td>
+        </tr>
+        <tr>
+          <th>Lavado tradicional</th>
+          <td>
+           
+            <input type="radio">Sí</input>
+            <input type="radio">No</input>
+        
+          </td>
+        </tr>
+        <tr>
+          <th>Ubicación geográfica</th>
+        
+
+        
+          <td>
+        
+            <tr>
+              <th>Ubicación geográfica:</th>
+            </tr>
+            <tr>
+              <td><label for="latitud">Latitud:</label></td>
+              <td><input type="number" name="latitud" id="latitud" placeholder="Latitud"></td>
+            </tr>
+            <tr>
+              <td><label for="longitud">Longitud:</label></td>
+              <td><input type="number" name="longitud" id="longitud" placeholder="Longitud"></td>
+            </tr>
+            <tr>
+              <td><label for="altitud">Altitud:</label></td>
+              <td><input type="number" name="altitud" id="altitud" placeholder="Altitud"></td>
+            </tr>
+   
+          </td>
+        
+        
+        
+        </tr>
+        <tr>
+          <th>Cuenta con análisis vigente</th>
+          <td>
+          
+            <input type="radio">Sí</input>
+            <input type="radio">No</input>
+        </td>
+        </tr>
+        <tr>
+          <th>Fecha de último análisis de suelo</th>
+          <td><input type="date"></td>
+        </tr>
+        <tr>
+          <th>El asociado vive en la finca</th>
+          <td>
+        
+            <input type="radio">Sí</input>
+            <input type="radio">No</input>
+          </td>
+        </tr>
+        <tr>
+          <th>Cuenta con Administrador</th>
+          <td>
+          
+            <input type="radio">Sí</input>
+            <input type="radio">No</input>
+        </td>
+        </tr>
+        <tr>
+          <th>Mano de obra familiar</th>
+          <td>
+        
+            <input type="radio">Sí</input>
+            <input type="radio">No</input>
+          </td>
+        </tr>
+      
+
+            <tr>
+              <th>Lleva registros y facturas</th>
+              <td>
+          
+                <input type="radio">Sí</input>
+                <input type="radio">No</input>
+                </td>
+            </tr>
+            <tr>
+               
+
+              <th>Viven menores de edad</th>
+              <td>
+          
+                <input type="radio">Sí</input>
+                <input type="radio">No</input>
+                </td>
+
+            </tr>
+            <tr>
+                <th>Rango de edad (años) cuantos por rango</th>
+                <td>
+                  <select>
+                      <option value="Seleccionar">Seleccionar</option>  
+                    <option value="rango 0">0-6</option>
+                    <option value="7">0-7</option>
+                    <option value="18">13-18</option>
+                  </select>
+                </td>
+   
+            </tr>
+            <tr>
+              <th>Contrata menores de edad </th>
+              <td>
+                <input type="radio">Sí</input>
+                <input type="radio">No</input>
+                </td><td><input type="number" placeholder="Cuantos  ?"></td>
+          </tr>
+          <tr>
+                <th>Numero personal permanente</th>
+                <td>
+                  <select>
+                      <option value="Seleccionar">Seleccionar</option>  
+                    <option value="rango 1">1</option>
+                    <option value="rango 2">2</option>
+                    <option value="rango 3">3</option>
+                    <option value="rango 4">4</option>
+                    <option value="rango 5">5</option>
+                    <option value="rango 6">6</option>
+                    <option value="rango 7">7</option>
+                    <option value="rango 8">8</option>
+                    <option value="rango 9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    
+                </select>
+                </td>
+
+
+            </tr>
+            <tr>
+                <th>Numero personal Temporal</th>
+                <td>
+                  <select>
+                      <option value="Seleccionar">Seleccionar</option>  
+                    <option value="rango 1">1</option>
+                    <option value="rango 2">2</option>
+                    <option value="rango 3">3</option>
+                    <option value="rango 4">4</option>
+                    <option value="rango 5">5</option>
+                    <option value="rango 6">6</option>
+                    <option value="rango 7">7</option>
+                    <option value="rango 8">8</option>
+                    <option value="rango 9">9</option>
+                    <option value="rango 10">10</option>
+                    <option value="12">13</option>
+                    <option value="13">14</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+
+
+                </select>
+                </td>
+              </table><br><br><br>
+
+<!-- ---------------------------------------------------------------------------------------------------------------- -->
+
+              <!-- TABLA DE INFRAESTRUCTURA -->
+                <table id="tabla-infra">                  
+                  <tr>
+                    <th colspan="2">Infraestructura :</th>
+                  </tr>
+                  <tr>
+                    <tr>
+                
+
+                    <tr>
+                      <th colspan="2">Beneficio Humedo</th>
+                    </tr>
+                    <tr>
+                      <td>Maquina despulpadora :</td>
+                      <td>
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+
+                        </td>
+                    </tr>
+                    <tr>
+                      <td>Tanque de fermentación (enchape):</td>
+                      <td>
+                        
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tanque tina:</td>
+                      <td>
+                        
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tolva:</td>
+                      <td>
+                        
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tolva Plástica:</td>
+                      <td>
+                        
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Pisos:</td>
+                      <td>
+                        
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Paredes:</td>
+                      <td>
+                        
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Fosa (techada):</td>
+                      <td>
+                        
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Tipo de beneficio:</td>
+                      <td>
+
+                        <select name="tipo_beneficio">
+                          
+                          <option >Seleccione</option>
+                          <option value="ecologico">Ecológico</option>
+                          <option value="becolsub">Becolsub</option>
+                          <option value="tradicional">Tradicional</option>
+                          <option value="economico">Económico</option>
+                        </select>
+                                                
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Observaciones:</td>
+                      <td>
+                        <textarea name="observaciones" rows="4" cols="50" placeholder="Observaciones"></textarea>
+                      </td>
+                    </tr>
+                  
+
+
+                    <thead>
+                      <tr>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Marquesina</td>
+                        <td>
+                          
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Elba</td>
+                        <td>
+                          
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                        </td>
+                      </tr>
+                      <tr>
+
+
+                        <td>silo</td>
+                        <td>
+                          
+                        <input type="radio">Bueno</input>
+                        <input type="radio">Malo</input>
+                        </td>
+                      </tr>
+                      <tr>
+
+                        <td>Tipo de silo</td>
+                        <td>
+                          
+                        <input type="radio">Gas</input>
+                        <input type="radio">Carbon</input>                        
+                        <input type="radio">Sisco</input>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Kit poscosecha</td>
+                        <td>
+
+                        <input type="radio">Si</input>
+                        <input type="radio">No</input>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Capacidad de vol. de secado</td>
+                        <td><label>Suficiente</label></td>
+                        <td><input type="number" placeholder="Suficiente"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td><label>Insuficiente</label></td>
+                        <td><input type="number" placeholder="Insuficiente"></td>
+                      </tr>
+                      <tr>
+                        <td>Observaciones</td>
+                        <td>
+                          <textarea></textarea>
+                        </td>
+                      </tr>
+
+                      <th>Bodegas : </th>
+                      <tr>
+                        <td>Bodegas de agroquímicos</td>
+                        <td>
+                          <input type="radio">Tiene</input>
+                          <input type="radio">No tiene</input>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Bodegas de insumos</td>
+                        <td>
+                        
+                          <input type="radio">Tiene</input>
+                          <input type="radio">No tiene</input>
+  
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Bodegas de Herramientas</td>
+                        <td>
+                          <input type="radio">Tiene</input>
+                          <input type="radio">No tiene</input>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Bodegas de pergamino</td>
+                        <td>
+                          
+                          <input type="radio">Tiene</input>
+                          <input type="radio">No tiene</input>
+
+                        </td>
+                      </tr>
+                      <tr>
+
+                        <td>Bodegas seguras</td>
+                        <td>
+                          
+                          <input type="radio">Si</input>
+                          <input type="radio">No</input>
+
+                        <tr>
+
+                            <td>Beneficiadero es seguro</td>
+                            <td>
+                              
+                          <input type="radio">Si</input>
+                          <input type="radio">No</input>
+
+                            <tr>
+    
+    
+                                <td>Tiene infraestructura del beneficiadero</td>
+                                <td>
+                                  
+                          <input type="radio">Si</input>
+                          <input type="radio">No</input>
+
+                                <tr>
+        
+        
+                                    <th>Observaciones</th>
+                                    <td>
+                                      <textarea placeholder="Observacion"></textarea>
+                                    </td>
+                        
+                                  </table>
+
+
+                                  
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+                                 <!-- TABLA DE BAA -->   
+                                    <table id="tabla-bpa">
+                                        <h2>Manejo BPA </h2>
+                                        <tr>
+                                          <th>Elementos de protección personal</th>
+                                          <td>
+                                            
+                                                 <input type="radio">Tiene</input>
+                                                <input type="radio">No Tiene</input>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>Kit antiderrame</th>
+                                          <td>
+                                            
+                                                 <input type="radio">Si</input>
+                                                 <input type="radio">No</input>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>Extintor</th>
+                                          <td>
+                                            
+                                                   <input type="radio">Si</input>
+                                                  <input type="radio">No</input>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>Existen agroquímicos de la lista roja FairTrade en el predio</th>
+                                  
+                                          <td>
+                                      
+                                                       <input type="radio">Si</input>
+                                                         <input type="radio">No</input>
+                                          </td>
+                                        
+                                          <td><input type="text" placeholder="Especificar"></td>
+                                        
+                                        </tr>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <tr>
+                                          <th> Existen Agroquímicos de la lista naranja FairTrade en el predio</th>
+                                          <td>
+                                            
+                                                        <input type="radio">Si</input>
+                                                         <input type="radio">No</input>
+                                          </td>
+                                          <td><input type="text" placeholder="Especificar"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>Utiliza productos biológicos y orgánicos</th>
+                                          <td>
+                                            
+                                                      <input type="radio">Si</input>
+                                                           <input type="radio">No</input>
+
+                                          </td>
+                                          <td><input type="text" placeholder="Especificar"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>Zona de preparación y dosificación</th>
+                                          <td>
+                                            
+                                            <input type="radio">Tiene</input>
+                                            <input type="radio">No Tiene</input>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>Realiza los envases de agroquímicos vacíos para otras actividades de la finca</th>
+                                          <td> 
+                                            
+                                                   <input type="radio">Si</input>
+                                                  <input type="radio">No</input>
+
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>Se separan los agroquímicos de lista roja FairTrade para otros cultivos de café</th>
+                                          <td>
+                                            
+                                                  <input type="radio">Si</input>
+                                                    <input type="radio">No</input>
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+
+                                            <th>Cuenta con punto ecologico</th>
+                                            <td>
+                                              
+                                                     <input type="radio">Si</input>
+                                                     <input type="radio">No</input>
+                                         
+                                                 </td>
+                                                 <tr>
+
+                                                  <th>En la finca se realiza separacion de residuos reciclables y residuos peligrosos (post consumo)</th>
+                                                  <td>
+                                                    
+                                                           <input type="radio">Si</input>
+                                                           <input type="radio">No</input>
+                                               
+                                                       </td>
+                                          </tr>
+                                        
+                                          <tr>
+                                            <th>Finca con potencial para proceso de certificacion</th>
+                                            <td>  <input type="radio">Si</input>
+                                                  <input type="radio">No</input>
+                                                </td><td><input type="text" placeholder="¿ Cual ?"</td>
+                                            </tr>
+
+
+
+
+
+                                            <th>Observaciones</th>
+                                            <td>
+                                              <textarea placeholder="Observaciones"></textarea>
+                                            </td>
+        
+
+                                            <table><br>
+                                        
+                <!-------------------------------------------------------------------------------------------------------------------------------------------- - -->
+                                    <!-- Tabla de componente ambiental -->
+                                    <table id="tabla-com-amb">
+                                      <thead>
+                                        <tr>
+                                          <th>Componente ambiental :</th>
+                                        </tr>
+                                        <tr>
+                                          <th>La finca cuenta con las siguientes areas de conservacion :</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>
+
+                                            <select id="conservacion" name="conservacion">
+                                              <option value="guduales">Seleccionar</option>
+                                              <option value="guduales">Guduales</option>
+                                              <option value="aflotamiento">Aflotamiento</option>
+                                              <option value="bosques">Bosques</option>
+                                              <option value="quebradas">Quebradas</option>
+                                              <option value="rios">Rios</option>
+                                              <option value="otros">Otros</option>
+                                            </select>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                    
+
+
+            <!-- -------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+                                      
+                                      <!-- TABLA ESPECIES FORESTALES -->
+                                      <table id="tabla-especies">
+                                        <h2>Especies forestales</h2>
+                                        <thead>
+                                          <tr>
+                                            <th>Nombre común</th>
+                                            <th>Cantidad</th>
+                                            <th>%</th>
+                                            
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                         
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>                                                                                                                                               
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+
+
+
+
+                                          <tr>
+                                            <td><input type="text" placeholder="Nombre comun" /></td>
+                                            <td><input type="number"  placeholder="Cantidad"/></td>
+                                            <td><input type="number" placeholder="%" /></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text" /></td>
+                                            <td><input type="number" /></td>
+                                            <td><input type="number" /></td>
+                                          </tr>
+
+                                          
+
+
+                                        </tbody>
+                                      </table><br>
+
+
+<!-- ----------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+                                      <!-- TABLA ESPECIES DE ARBOLES LEGUIMINOSOS/FRUTALES -->
+                                      <table id="tabla-arboles">
+                                        <h2>Especies de árboles leguminosos/frutales</h2>
+                                        <thead>
+                                          <tr>
+                                            <th>Nombre común</th>
+                                            <th>Cantidad</th>
+                                            <th>%</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                          <tr>
+                                            <td><input type="text"  placeholder="Nombre comun"/></td>
+                                            <td><input type="number" placeholder="Cantidad" /></td>
+                                            <td><input type="number"  placeholder="%"/></td>
+                                          </tr>
+
+                                        </tbody>
+                                      </table><br>
+                                      
+                                      
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+                                            <!--Alternativas de manejo de aguas   -->
+
+                                            <table id="tabla-aguas">
+                                            
+                                              <thead>
+                                                <tr>
+                                                  <h2 colspan="3">Alternativas de manejo de aguas</h2>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                               
+                                                <tr>
+                                                  <td>
+                                                    <input type="radio" name="pozo-septico">Pozo sépticos</input>
+                                                  </td>
+                                                  <td>
+                                                    <label>Tiene</label>
+                                                    <input type="checkbox" placeholder="Tiene">
+                                                  </td>
+                                                  <td>
+                                                    <label>No tiene</label>
+                                                    <input type="checkbox" |||placeholder="No tiene">
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <input type="radio" name="resumidero">Resumidero</input>
+                                                  </td>
+                                                  <td>
+                                                    <label>Tiene</label>
+                                                    <input type="checkbox" placeholder="Tiene">
+                                                  </td>
+                                                  <td>
+                                                    <label>No tiene</label>
+                                                    <input type="checkbox" placeholder="No tiene">
+                                                  </td>
+                                                </tr>
+                                              
+                                                <tr>
+                                                  <td>
+                                                    <input type="radio" name="proceso-cafe">Proceso beneficio café</input>
+                                                  </td>
+                                                  <td>
+                                                    <label>Tiene</label>
+                                                    <input type="checkbox" placeholder="Tiene">
+                                                  </td>
+                                                  <td>
+                                                    <label>No tiene</label>
+                                                    <input type="checkbox" placeholder="No tiene">
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <input type="radio" name="tratamiento-mieles">Sistema de tratamiento de aguas mieles</input>
+                                                  </td>
+                                                  <td>
+                                                    <label>Tiene</label>
+                                                    <input type="checkbox" placeholder="Tiene">
+                                                  </td>
+                                                  <td>
+                                                    <label>No tiene</label>
+                                                    <input type="checkbox" placeholder="No tiene">
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <input type="radio" name="arte-mieles">Sist. Arte de aguas mieles</input>
+                                                  </td>
+                                                  <td>
+                                                    <label>Tiene</label>
+                                                    <input type="checkbox" placeholder="Tiene">
+                                                  </td>
+                                                  <td>
+                                                    <label>No tiene</label>
+                                                    <input type="checkbox" placeholder="No tiene">
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <input type="radio" name="residuales-domesticas">Residuales domésticas</input>
+                                                  </td>
+                                                  <td>
+                                                    <label>Tiene</label>
+                                                    <input type="checkbox" placeholder="Tiene">
+                                                  </td>
+                                                  <td>
+                                                    <label>No tiene</label>
+                                                    <input type="checkbox" placeholder="No tiene">
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td colspan="3">
+                                                    <table><br>
+
+
+
+                   <!-- Tabla Beneficios-------------------------------------------------------------------------- -->
+
+                                                          <table>
+                                                          <h2>Descarga de aguas residuales beneficio </h2>
+                                                          <tr>
+                                                            <td>
+                                                              <input type="radio" name="proceso-cafe">Infiltracion al suelo cerca de AAVC</input>
+                                                            </td>
+                                                            <td>
+                                                              <label>Tiene</label>
+                                                              <input type="checkbox" placeholder="No Tiene">
+                                                            </td>
+                                                            <td>
+                                                              <label>No tiene</label>
+                                                              <input type="checkbox" placeholder="No tiene">
+                                                            </td>
+
+                                                            <tr>
+                                                              <td>
+                                                                <input type="radio" name="proceso-cafe">Infiltracion al suelo</input>
+                                                              </td>
+                                                              <td>
+                                                                <label>Tiene</label>
+                                                                <input type="checkbox" placeholder="No Tiene">
+                                                              </td>
+                                                              <td>
+                                                                <label>No tiene</label>
+                                                                <input type="checkbox" placeholder="No tiene">
+                                                              </td>
+  
+
+                                                              <tr>
+                                                                <td>
+                                                                  <input type="radio" name="proceso-cafe">Descarga directa a fuentes hidricas</input>
+                                                                </td>
+                                                                <td>
+                                                                  <label>Tiene</label>
+                                                                  <input type="checkbox" placeholder="No Tiene">
+                                                                </td>
+                                                                <td>
+                                                                  <label>No tiene</label>
+                                                                  <input type="checkbox" placeholder="No tiene">
+                                                                </td>
+
+
+
+                                                                
+                                                                <tr>
+                                                                  <td>
+                                                                    <label type="radio" name="proceso-cafe"></label>En el predio hay fauna en cautiverio y/o especies invasoras
+                                                                  </td>
+                                                                  <td>
+                                                                    <label>Si</label>
+                                                                    <input type="checkbox" placeholder="Tiene">
+                                                                  </td>
+                                                                  <td>
+                                                                    <label>No</label>
+                                                                    <input type="checkbox" placeholder="No tiene">
+                                                                  </td>
+                                                                  <td><input type="text" placeholder="Cuales ?"></td>
+                                                                </tr>
+
+
+                                                                  <tr>
+
+
+                                                                    
+                                                                
+
+    
+                                                                <tr>
+                                                                  <td>
+                                                                    <label type="radio" name="proceso-cafe"></label>En el predio cuenta con barreras vivas de amortiguamiento alrededor de zonas sociales y fuentes hidricas
+                                                                  </td>
+                                                                  <td>
+                                                                    <label>Si</label>
+                                                                    <input type="checkbox" placeholder="Tiene">
+                                                                  </td>
+                                                                  <td>
+                                                                    <label>No</label>
+                                                                    <input type="checkbox" placeholder="No tiene">
+                                                                  </td><br>
+                                                                  <tr>
+                                                                  
+                                                                    <td>
+                                                                      <label  name="proceso-cafe"></label>Cuando se fumiga se respecta una distancia de 10 metros de fuentes de agua y zonas sociales
+                                                                    </td>
+                                                                    <td>
+                                                                      <label>Si</label>
+                                                                      <input type="checkbox" placeholder=" No Tiene">
+                                                                    </td>
+                                                                    <td>
+                                                                      <label>No</label>
+                                                                      <input type="checkbox" placeholder="No tiene">
+                                                                    </td><br>
+  
+
+
+
+                                                                    <tr>
+                                                                      <td>
+                                                                        <label type="radio" name="proceso-cafe"></label>Se han identificado problemas de erosion en la finca
+                                                                      </td>
+                                                                      <td>
+                                                                        <label>Si</label>
+                                                                        <input type="checkbox" placeholder="Tiene">
+                                                                      </td>
+                                                                      <td>
+                                                                        <label>No</label>
+                                                                        <input type="checkbox" placeholder="No tiene">
+                                                                      
+                                                                      </td>
+                                                                      </tr>
+
+
+                                                                       <tr>
+                                                                      <td>
+                                                                        <label type="radio" name="proceso-cafe"></label>Si la respuesta es afirmativa mencione la ubicacion
+                                                                      </td><td><input type="text" placeholder="¿ Ubicacion ?"</td>
+                                                                     
+                                                                    
+                                                                    </tr>
+                                                                     
+                                                                      
+                                                                      <tr>
+
+                                                                        <th>Observaciones</th>
+                                                                        <td>
+                                                                          <textarea placeholder="Observacion"></textarea>
+                                                                        </td>
+  
+
+                                                                      </tr>
+                                                                
+                                                          </table> 
+
+                                                        
+
+<!-- Botones -------------------------------- -->
+ 
+<table id="Guardar-datos">
+
+  <th>Guarde la informacion:
+    <br>
+    <br>
+    <button>Guardar datos</button>
+    <button>Ver datos</button>
+    <button>Exportar datos</button>
+  
+  </th> 
+
+
+</table>

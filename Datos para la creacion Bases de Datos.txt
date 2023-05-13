@@ -1,0 +1,16 @@
+
+-------------Acta de diagnostico :
+
+************************
+HTML :
+--Proyecto Acta de Diagnostico
+--Interfaz                                           90%
+--Codigo
+--Consultas
+--Conexion Bases de datos
+
+*********************************
+MSQL :
+
+--Bases de datos
+--Consultar bases de datos

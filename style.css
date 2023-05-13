@@ -1,0 +1,371 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 15px;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+td:first-child,
+th:first-child {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+table:nth-child(2) {
+  margin-top: 40px;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+form button {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+#cedulaAsociado {
+  width: 20%;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+}
+input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px 0 #4caf50;
+}
+
+#consulta input::placeholder {
+  color: black;
+}
+
+#consulta {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* --------- Datos pintados de la primera tabla */
+
+table#tabla-datos td:nth-child(1) {
+  background-color: darkslategray;
+  color: #fff;
+}
+
+#tabla-datos td:nth-child(2) {
+  color: #fff;
+  background-color: #848484;
+}
+/* ------------------------------------------------------------------------------------------------------- */
+
+table#Acta-diagnostico td:nth-child(2) {
+  background-color: #848484;
+  color: blue;
+}
+
+#tabla-datos input::placeholder {
+  color: black;
+}
+
+#Acta-diagnostico {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#Acta-diagnostico th:nth-child(1) {
+  background-color: darkslategray;
+  color: #fff;
+
+  padding: 10px;
+}
+
+#Acta-diagnostico input::placeholder {
+  color: #ccc;
+}
+
+#Acta-diagnostico td :nth-child(2) {
+  padding: 10px;
+  border-bottom: 1px solid #848484;
+}
+
+#Acta-diagnostico input::placeholder {
+  color: black;
+}
+
+#datos-finca {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#datos-finca th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#datos-finca td {
+  background-color: #848484;
+  padding: 10px;
+}
+
+#datos-finca input::placeholder {
+  color: black;
+}
+
+#tabla-municipio {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-municipio td {
+  background-color: darkslategray;
+  color: black;
+  width: 80000%;
+  height: 20px;
+}
+
+#tabla-municipio input::placeholder {
+  color: black;
+}
+
+#tabla-variedades {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-variedades th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-variedades td {
+  background-color: #848484;
+  padding: 10px;
+}
+
+#tabla-variedades input::placeholder {
+  color: black;
+}
+
+#tabla-infra {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-infra th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-infra td {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-infra input::placeholder {
+  color: black;
+}
+
+#tabla-bpa {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-bpa th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-bpa td {
+  background-color: #848484;
+  padding: 10px;
+}
+
+#tabla-bpa input::placeholder {
+  color: black;
+}
+
+#tabla-com-amb {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-com-amb th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-com-amb td {
+  background-color: #848484;
+
+  padding: 10px;
+}
+
+#tabla-com-amb input::placeholder {
+  color: black;
+}
+
+#tabla-especies {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-especies th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-especies td {
+  background-color: darkslategray;
+
+  padding: 10px;
+}
+
+#tabla-especies input::placeholder {
+  color: black;
+}
+
+#tabla-arboles {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-arboles th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-arboles td {
+  background-color: darkslategray;
+
+  padding: 10px;
+}
+
+#tabla-arboles input::placeholder {
+  color: black;
+}
+
+#tabla-aguas {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+}
+
+#tabla-aguas th {
+  background-color: darkslategray;
+  color: #f2f2f2;
+  padding: 10px;
+}
+
+#tabla-aguas td {
+  background-color: darkslategray;
+  color: aliceblue;
+  padding: 10px;
+}
+
+#tabla-aguas input::placeholder {
+  color: black;
+}
+
+body {
+  background-color: #6c878f;
+}
