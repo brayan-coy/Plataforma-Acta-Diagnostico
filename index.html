@@ -4,76 +4,75 @@
     <meta charset="UTF-8">
     <title>Acta de diagnóstico</title>
     <link rel="stylesheet" href="style.css">
-   
-
-    
-   <!--  <script src="main.js"></script>
- -->
+    <script src="Exportar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.full.min.js"></script>
   </head>
   <body>
+    <table id="consulta">      
+      <tr>
+        <td colspan="2"><h2>Acta diagnóstico</h2></td>       
+      </tr>
+      <tr>
+      </tr>
+      <tr>
+        <td>
+          <label>Consultar usuario </label><br><br><br>
+          <input type="text" id="cedulaAsociado" placeholder="Ingrese Cedula"><br><br><br>
+          <button onclick="consultar()">Consultar</button><br><br>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Agregar Asociado </label><br><br><br>
+          <button>Agregar Asociado</button><br><br><br>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>Consultas</label><br><br>
+          <button>Consultar</button>
+        </td>  
+      </tr>
 
-    <table id="consulta">
-      <tr>
-        <td colspan="2"><h2>Acta diagnostico</h2></td>       
-      </tr>
-      <tr>
-      </tr>
-      <tr>
-        <td><label>Consultar usuario </label><br><br><br>
-        <input type="text" id="cedulaAsociado" placeholder="Ingrese Cedula" font-size: 5px><br><br><br>
-        <button>Conultar</button><br><br></td>
-      
-      </tr>
-      <tr>
-        <td><label>Agregar Asociado </label><br><br><br>
-        <button>Agrgar Asociado</button><br><br><br></td>
-      </tr>
-      <tr>
-        <td><label>Consultas</label><br><br>
-        <button>Consultar</button></td>
-      </tr>
-    </table><br><br><br><br><br><br>
+    </table>
+    <br><br><br><br><br><br>
     
-       
+    <!-- Primera tabla de Datos personales del asociado -->
+          <table id="tabla-datos">
+        <thead>
+          <tr>
+            <td colspan="2"><h2>Datos personales del asociado </h2></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label for="nombres">Nombres:</label></td>
+            <td><input type="text" id="nombres" required name="nombres" placeholder="Ingrese sus nombres" ></td>
+          </tr>
+          <tr>
+            <td><label for="apellidos">Apellidos:</label></td>
+            <td><input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos"></td>
+          </tr>
+          <tr>
+            <td>Genero:</td>
+            <td>
+              <label><input type="radio" name="genero" value="Femenino" >Femenino</label>
+              <label><input type="radio" name="genero" value="Masculino" >Masculino</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="cedula">Número de cédula:</label></td>
+            <td><input type="text" id="cedula" name="cedula" placeholder="Ingrese su número de cédula"></td>
+          </tr>
+          <tr>
+            <td><label for="celular">Número de celular:</label></td>
+            <td><input type="text" id="celular" name="celular" placeholder="Ingrese su número de celular"></td>
+          </tr>
+          <tr>
+            <td><label for="codigo_catastral">Código catastral:</label></td>
+            <td><input type="text" id="codigo_catastral" name="codigo_catastral" placeholder="Ingrese su código catastral"></td>
+         
 
-
-<!-- Primera tabla de Datos personales del asociado -->
-
-<form> 
-    <table id="tabla-datos">
-      <thead>
-        <tr>
-          <td colspan="2"><h2>Datos personales del asociado</h2></td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><label for="nombres">Nombres:</label></td>
-          <td><input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres"></td>
-        </tr>
-        <tr>
-          <td><label for="apellidos">Apellidos:</label></td>
-          <td><input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos"></td>
-        </tr>
-        <tr>
-          <td>Genero</td>
-          <td>
-            <input type="radio">Femenino</input>
-            <input type="radio">Masculino</input>
-      </tr>
-
-        <tr>
-
-          <td><label for="cedula">Número de cédula:</label></td>
-          <td><input type="text" id="cedula" name="cedula" placeholder="Ingrese su número de cédula"></td>
-        </tr>
-        <tr>
-          <td><label for="celular">Número de celular:</label></td>
-          <td><input type="text" id="celular" name="celular" placeholder="Ingrese su número de celular"></td>
-        </tr>
-        <tr>
-          <td><label for="codigo_catastral">Código catastral:</label></td>
-          <td><input type="text" id="codigo_catastral" name="codigo_catastral" placeholder="Ingrese su código catastral"></td>
         </tr>
         <tr>
           <td><label for="correo_electronico">Correo electrónico:</label></td>
@@ -96,61 +95,64 @@
           <td><label for="profesion">Profesión:</label></td>
           <td><input type="text" id="profesion" name="profesion" placeholder="Ingrese su profesión"></td>
         </tr>
+    
+    
+
       </tbody>
+
+      
     </table>
-  </form>
-    </table><br>
+    <br>
    
    
 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
 
 
- <form>  <!--    //////////////////7  2 TABLA DE ACTA DE DIAGNOSTICO -->
-  <table id="Acta-diagnostico" >
-    
-    <th colspan="2"><h2>Acta diagnostico</h2></th>
-       
-        <tr>
-          
-          <th>Fecha</th>
-          <td><input type="date" name="fecha"></td>
-        </tr>
-       
-        <tr>
-          <th>Tipo de visita</th>
-          <td>
-            <select name="convencional">
-              <option value="t1">Seleccionar</option>
-              <option value="Implentacion">Implentacion</option>
-              <option value="Seguimiento">Seguimiento</option>
-              <option value="Solicitud">Solicitud</option>
-              <option value="Otro">Otro</option>
-              
-            </select>
-          </td>
+  <table id="Acta-diagnostico">
+    <thead>
+      <tr>
+        <th colspan="2"><h2>Acta diagnostico</h2></th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>Fecha</th>
+      <td><input type="date"  id="fecha" /></td>
+    </tr>
 
 
-        <tr>
-          <th>Estatus del predio</th>
-          <td>
-            <select name="convencional">
-              <option value="t1">Seleccionar</option>
-              <option value="t1">Convesional</option>
-              <option value="t1">T1</option>
-              <option value="t2">T2</option>
-              <option value="t3">T3</option>
-              <option value="Organico">Organico</option>
-              
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <th>Tema tratado</th>
-          <td><textarea name="tema_tratado" placeholder="Ingrese el tema tratado"></textarea></td>
-        </tr>
-      </form>
-
-      </table><br><br<br>
+    <tr>
+      <th>Tipo de visita</th>
+      <td>
+        <select  id="tipovisita">
+          <option>Seleccionar</option>
+          <option value="Implentacion">Implentacion</option>
+          <option value="Seguimiento">Seguimiento</option>
+          <option value="Solicitud">Solicitud</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </td>
+    </tr>
+  
+    <tr>
+      <th>Estatus del predio</th>
+      <td>
+        <select id="estatuspredio">
+          <option>Seleccionar</option>
+          <option value="Convencional">Convesional</option>
+          <option value="t1">T1</option>
+          <option value="t2">T2</option>
+          <option value="t3">T3</option>
+          <option value="Organico">Organico</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th>Tema tratado</th>
+      <td><textarea  placeholder="Ingrese el tema tratado" id="tematratado"></textarea></td>
+    </tr>
+  </table>
+<br><br<br>
 
 
 <!-- -------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -217,47 +219,49 @@
   </thead>
   <tbody>                   
     <tr>
-      <td><input type="text" placeholder="Lotes"/></td>
-      <td><input type="number" placeholder="Distancia" /></td>
-      <td><input type="number"  placeholder="Planta surco"/></td>
-      <td><input type="number"  placeholder="%"/></td>
-      <td><input type="number"  placeholder="area"/></td>
-      <td><input type="number"  placeholder="% sombra"/></td>
-      <td><input type="number"  placeholder="Pendiente"/></td>
+      <td><input type="number"  id="lotes"  name="lotes"   placeholder="Lotes"/> </td>
+      <td><input type="number"id="planta" name="planta" placeholder="planta" /></td>
+      <td><input type="number" id="surco" name="surco" placeholder="surco"/></td>
+      <td><input type="number" id="numeroarboles" name="numeroarboles"  placeholder="numero-arboles"/></td>
+      <td><input type="number" id="area" name="area"  placeholder="area"/></td>
+      <td><input type="number" id="sombra" name="sombra" placeholder="% sombra"/></td>
+      <td><input type="number" id="pendiente" placeholder="Pendiente"/></td>
     </tr>
     <tr>
-      <td><input type="text" placeholder="Lotes"/></td>
-      <td><input type="number" placeholder="Distancia" /></td>
-      <td><input type="number"  placeholder="Planta surco"/></td>
-      <td><input type="number"  placeholder="%"/></td>
-      <td><input type="number"  placeholder="area"/></td>
-      <td><input type="number"  placeholder="% sombra"/></td>
-      <td><input type="number"  placeholder="Pendiente"/></td>
+      <td><input type="number" id="lotes2"  name="lotes" placeholder="Lotes"/></td>
+      <td><input type="number"id="planta" name="planta" placeholder="planta" /></td>
+      <td><input type="number" id="surco" name="surco" placeholder="surco"/></td>
+      <td><input type="number" id="numeroarboles" name="numeroarboles" placeholder="numero-arboles"/></td>
+      <td><input type="number" id="area" name="area" placeholder="area"/></td>
+      <td><input type="number"  id="sombra" name="sombra" placeholder="% sombra"/></td>
+      <td><input type="number" id="pendiente" placeholder="Pendiente"/></td>
     </tr>
     <tr>
-      <td><input type="text" placeholder="Lotes"/></td>
-      <td><input type="number" placeholder="Distancia" /></td>
-      <td><input type="number"  placeholder="Planta surco"/></td>
-      <td><input type="number"  placeholder="%"/></td>
-      <td><input type="number"  placeholder="area"/></td>
-      <td><input type="number"  placeholder="% sombra"/></td>
-      <td><input type="number"  placeholder="Pendiente"/></td>
+      <td><input type="number" id="lotes"  name="lotes" placeholder="Lotes"/></td>
+      <td><input type="number" id="planta" name="planta" placeholder="planta" /></td>
+      <td><input type="number" id="surco" name="surco" placeholder="surco"/></td>
+      <td><input type="number" id="numeroarboles" name="numeroarboles" placeholder="num-arboles"/></td>
+      <td><input type="number" id="area" name="area" placeholder="area"/></td>
+      <td><input type="number" id="sombra" placeholder="% sombra"/></td>
+      <td><input type="number" id="pendiente" name="pendiente" placeholder="Pendiente"/></td>
     </tr>
     <tr>
-      <td><input type="text" placeholder="Lotes"/></td>
-      <td><input type="number" placeholder="Distancia" /></td>
-      <td><input type="number"  placeholder="Planta surco"/></td>
-      <td><input type="number"  placeholder="%"/></td>
-      <td><input type="number"  placeholder="area"/></td>
-      <td><input type="number"  placeholder="% sombra"/></td>
-      <td><input type="number"  placeholder="Pendiente"/></td>
+      <td><input type="number"  id="lotes"  name="lotes" placeholder="Lotes"/></td>
+      <td><input type="number"  id="planta" name="planta" placeholder="planta" /></td>
+      <td><input type="number" id="surco" name="surco" placeholder="surco"/></td>
+      <td><input type="number" id="numeroarboles" name="numeroarboles" placeholder="num-arboles"/></td>
+      <td><input type="number" id="area" name="area" placeholder="area"/></td>
+      <td><input type="number" id="sombra" placeholder="% sombra"/></td>
+      <td><input type="number" id="pendiente" name="pendiente" placeholder="Pendiente"/></td>
     </tr>
     <tr>
-      <td><input type="text" placeholder="Lotes"/></td>
-      <td><input type="number" placeholder="Distancia" /></td>
-      <td><input type="number"  placeholder="Planta surco"/></td>
-      <td><input type="number"  placeholder="%"/></td>
-      <td><input type="number"  placeholder="area"/></td>
+      <td><input type="number" id="lotes"  name="lotes" placeholder="Lotes"/></td>
+      <td><input type="number"   id="planta" name="planta" placeholder="planta" /></td>
+      <td><input type="number" id="surco" name="surco" placeholder="surco"/></td>
+      <td><input type="number" id="numeroarboles" name="numeroarboles" placeholder="num-arboles"/></td>
+      <td><input type="number" id="area" name="area" placeholder="area"/></td>
+      <td><input type="number" id="sombra" placeholder="% sombra"/></td>
+      <td><input type="number" id="pendiente" name="pendiente" placeholder="Pendiente"/></td>
       </tr      
     </table>
 
@@ -270,19 +274,19 @@
   </tr>
   <tr>
     <td>Área de alto valor de conservación</td>
-    <td><input type="number" id="altoValor" placeholder="Area total conservacion"></td>
+    <td><input type="number" id="altovalor" name="altovalor" placeholder="Area total conservacion"></td>
   </tr>
   <tr>
     <td>Área social</td>
-    <td><input type="number" id="areaSocial" placeholder="Area social"></td>
+    <td><input type="number" id="areasocial" name="areasocial" placeholder="Area social"></td>
   </tr>
   <tr>
     <td>Área total</td>
-    <td><input type="number" id="areaTotal" placeholder="Area total"></td>
+    <td><input type="number" id="areatotal" name="areatotal" placeholder="Area total"></td>
   </tr>
   <tr>
     <td>Producción en arrobas</td>
-    <td><input type="number" id="produccion" placeholder="Produccion en arrobas"></td>
+    <td><input type="number" id="produccion" name="produccion" placeholder="Produccion en arrobas"></td>
   </tr>
 </table>
         </table>
@@ -297,38 +301,28 @@
             <h2 for="cultivo">Cultivo</h2><br><br>
             
             
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
-    
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
-            
-            
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
-            
-            
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
-            
-            
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
-            
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
-            
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
-            
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Cultivo"><br><br>
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>            
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>
+            <input type="number" id="cultivo" name="cultivo" placeholder="Cultivo"><br><br>
           </td>
           <td>
             <h2 for="distancia-siembra">Planta</h2>
               
             </select><br><br>
 
+            <input type="number" id="plantas" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="plantas" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="plantas" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="plantas" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="plantas" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="plantas" name="num-arboles" placeholder="Planta"><br><br>
             <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
-            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
-            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
-            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
-            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
-            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
-            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
-            <input type="number" id="planta" name="num-arboles" placeholder="Planta"><br><br>
+            <input type="number" id="plantas" name="num-arboles" placeholder="Planta"><br><br>
 
           </td>
 
@@ -337,52 +331,52 @@
               
             </select><br><br>
 
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
-            <input type="number" id="surco" name="num-arboles" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
+            <input type="number" id="surcos" name="surcos" placeholder="Surco"><br><br>
 
           </td>
 
           <td>
             <h2 for="num-arboles">Numero de arboles</h2>
           
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
-            <input type="number" id="num-arboles" name="num-arboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
+            <input type="number" id="numarboles" name="numarboles" placeholder="Numero arboles"><br><br>
           
           
           </td>
           <td>
             <h2 for="area-arboles">Area</h2><br><br>
-            <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles">
+            <input type="number" id="areaarboles" name="areaarboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles"><br><br> <input type="number" id="area-arboles" name="area-arboles" placeholder="Area de arboles">
           </td>
           <td>
          
             <h2 for="produccion">Producción</h2
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>    
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
-              <input type="number" id="produccion" name="produccion" placeholder="produccion"><br><br>
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>    
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>
+              <input type="number" id="producciones" name="producciones" placeholder="produccion"><br><br>
           </td>
             
           </td>
           <td>
             <h2 for="area-total">Area total otros cultivos</h2><br><br><br><br><br>
-            <input type="number" id="area-total" name="area-total" placeholder="Area total cultivos">
+            <input type="number" id="areatotalarboles" name="areatotal" placeholder="Area total cultivos">
           </td>
         </tr>
       </table><br>
@@ -394,56 +388,51 @@
 
 
    <!-- TABLA DE VARIEDADES -->  
-      <table id="tabla-variedades">
+
+
+   
+      <table id="tabla-variedades" >
         <tr>
           <th>Variedades</th>
           <td>
-           <input type="text" placeholder="Variedades">
+           <input type="text" id="variedad" placeholder="Variedades">
           </td>
         </tr>
         <tr>
         </tr>
         <tr>
-          <th>Se tiene algun proceso de cafe</th>
+          <th>procesocafe</th>
           <td>
-            <input type="radio" name="proceso" value="naturales">Naturales
-            <input type="radio" name="proceso" value="honey">Honey
-            <input type="radio" name="proceso" value="naturales">Fermentacion controlada
-            <input type="radio" name="proceso" value="honey">Lavado tradicional
-            
+           
+            <input type="radio" name="proceso" value="Naturales ">Naturales 
+            <input type="radio" name="proceso" value="Honey">Honey
+            <input type="radio" name="proceso" value="Fermentación-controlada">Fermentacion controlada
+            <input type="radio" name="proceso" value="LavadoTradicional">Lavado-tradicional
+        
           </td>
         </tr>
         <tr>
           <th>Cuenta con mapa de la finca</th>
           <td>
-          
-              <input type="radio">Sí</input>
-              <input type="radio">No</input>
+    
+              <input type="radio" name="validar" value="Si">Sí</input>
+              <input type="radio" name="validar" value="No">No</input>
           
           </td>
         </tr>
         <tr>
           <th>Fermentación controlada</th>
           <td>
-            <input type="radio">Sí</input>
-            <input type="radio">No</input>
+            <input type="radio" name="validar2" value="Si">Sí</input>
+            <input type="radio" name="validar2" value="No">No</input>
         
           </td>
         </tr>
         <tr>
-          <th>Lavado tradicional</th>
-          <td>
-           
-            <input type="radio">Sí</input>
-            <input type="radio">No</input>
-        
-          </td>
+          
         </tr>
         <tr>
-          <th>Ubicación geográfica</th>
-        
-
-        
+          
           <td>
         
             <tr>
@@ -471,36 +460,44 @@
           <th>Cuenta con análisis vigente</th>
           <td>
           
-            <input type="radio">Sí</input>
-            <input type="radio">No</input>
+            <input type="radio" name="validar3" value="Si">Sí</input>
+            <input type="radio" name="validar3" value="No">No</input>
+        
         </td>
         </tr>
         <tr>
           <th>Fecha de último análisis de suelo</th>
-          <td><input type="date"></td>
+          <td><input type="date" id="fecha2"></td>
         </tr>
         <tr>
           <th>El asociado vive en la finca</th>
           <td>
         
-            <input type="radio">Sí</input>
-            <input type="radio">No</input>
+            <input type="radio" name="validar4" value="Si">Sí</input>
+            <input type="radio" name="validar4" value="No">No</input>
+        
+        
           </td>
         </tr>
         <tr>
           <th>Cuenta con Administrador</th>
           <td>
           
-            <input type="radio">Sí</input>
-            <input type="radio">No</input>
+            <input type="radio" name="validar5" value="Si">Sí</input>
+            <input type="radio" name="validar5" value="No">No</input>
+        
         </td>
         </tr>
         <tr>
           <th>Mano de obra familiar</th>
           <td>
         
-            <input type="radio">Sí</input>
-            <input type="radio">No</input>
+          
+            <input type="radio" name="validar6" value="Si">Sí</input>
+            <input type="radio" name="validar6" value="No">No</input>
+        
+          
+          
           </td>
         </tr>
       
@@ -509,8 +506,10 @@
               <th>Lleva registros y facturas</th>
               <td>
           
-                <input type="radio">Sí</input>
-                <input type="radio">No</input>
+                <input type="radio" name="validar7" value="Si">Sí</input>
+                <input type="radio" name="validar7" value="No">No</input>
+            
+              
                 </td>
             </tr>
             <tr>
@@ -519,19 +518,20 @@
               <th>Viven menores de edad</th>
               <td>
           
-                <input type="radio">Sí</input>
-                <input type="radio">No</input>
-                </td>
+                <input type="radio" name="validar8" value="Si">Sí</input>
+                <input type="radio" name="validar8" value="No">No</input>
+              
+              </td>
 
             </tr>
             <tr>
                 <th>Rango de edad (años) cuantos por rango</th>
                 <td>
-                  <select>
-                      <option value="Seleccionar">Seleccionar</option>  
-                    <option value="rango 0">0-6</option>
-                    <option value="7">0-7</option>
-                    <option value="18">13-18</option>
+                  <select id="rangos" name="rangos">
+                      <option  value="Seleccionar">Seleccionar</option>  
+                    <option value="0-6">0-6</option>
+                    <option value="0-7">0-7</option>
+                    <option value="13-18">13-18</option>
                   </select>
                 </td>
    
@@ -539,24 +539,25 @@
             <tr>
               <th>Contrata menores de edad </th>
               <td>
-                <input type="radio">Sí</input>
-                <input type="radio">No</input>
-                </td><td><input type="number" placeholder="Cuantos  ?"></td>
+                <input type="radio" name="validar9" value="Si">Sí</input>
+                <input type="radio" name="validar9" value="No">No</input>
+                
+              </td><td><input id="cuantos" type="number" placeholder="Cuantos  ?"></td>
           </tr>
           <tr>
                 <th>Numero personal permanente</th>
                 <td>
-                  <select>
-                      <option value="Seleccionar">Seleccionar</option>  
-                    <option value="rango 1">1</option>
-                    <option value="rango 2">2</option>
-                    <option value="rango 3">3</option>
-                    <option value="rango 4">4</option>
-                    <option value="rango 5">5</option>
-                    <option value="rango 6">6</option>
-                    <option value="rango 7">7</option>
-                    <option value="rango 8">8</option>
-                    <option value="rango 9">9</option>
+                  <select id="personal">
+                      <option>Seleccionar</option>  
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
                     <option value="12">12</option>
@@ -568,7 +569,6 @@
                     <option value="18">18</option>
                     <option value="19">19</option>
                     <option value="20">20</option>
-                    
                 </select>
                 </td>
 
@@ -577,20 +577,21 @@
             <tr>
                 <th>Numero personal Temporal</th>
                 <td>
-                  <select>
-                      <option value="Seleccionar">Seleccionar</option>  
-                    <option value="rango 1">1</option>
-                    <option value="rango 2">2</option>
-                    <option value="rango 3">3</option>
-                    <option value="rango 4">4</option>
-                    <option value="rango 5">5</option>
-                    <option value="rango 6">6</option>
-                    <option value="rango 7">7</option>
-                    <option value="rango 8">8</option>
-                    <option value="rango 9">9</option>
-                    <option value="rango 10">10</option>
-                    <option value="12">13</option>
-                    <option value="13">14</option>
+                  <select id="personaltemporal">
+                      <option >Seleccionar</option>  
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
                     <option value="14">14</option>
                     <option value="15">15</option>
                     <option value="16">16</option>
@@ -598,10 +599,9 @@
                     <option value="18">18</option>
                     <option value="19">19</option>
                     <option value="20">20</option>
-
-
                 </select>
                 </td>
+
               </table><br><br><br>
 
 <!-- ---------------------------------------------------------------------------------------------------------------- -->
@@ -621,72 +621,82 @@
                     <tr>
                       <td>Maquina despulpadora :</td>
                       <td>
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
-
+                        <input type="radio" name="validar20" value="Si">Sí</input>
+                        <input type="radio" name="validar20" value="No">No</input>
+                        
                         </td>
                     </tr>
                     <tr>
                       <td>Tanque de fermentación (enchape):</td>
                       <td>
                         
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                        
+                        <input type="radio" name="validar22" value="Si">Sí</input>
+                        <input type="radio" name="validar22" value="No">No</input>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td>Tanque tina:</td>
                       <td>
                         
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                        <input type="radio" name="validar23" value="Si">Sí</input>
+                        <input type="radio" name="validar23" value="No">No</input>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td>Tolva:</td>
                       <td>
                         
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                      
+                        <input type="radio" name="validar24" value="Si">Sí</input>
+                        <input type="radio" name="validar24" value="No">No</input>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td>Tolva Plástica:</td>
                       <td>
                         
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                        <input type="radio" name="validar26" value="Si">Sí</input>
+                        <input type="radio" name="validar26" value="No">No</input>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td>Pisos:</td>
                       <td>
                         
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                        <input type="radio" name="validar27" value="Si">Sí</input>
+                        <input type="radio" name="validar27" value="No">No</input>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td>Paredes:</td>
                       <td>
                         
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                        <input type="radio" name="validar28" value="Si">Sí</input>
+                        <input type="radio" name="validar28" value="No">No</input>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td>Fosa (techada):</td>
                       <td>
                         
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                      
+                        <input type="radio" name="validar30" value="Si">Sí</input>
+                        <input type="radio" name="validar30" value="No">No</input>
+                        
                       </td>
                     </tr>
                     <tr>
                       <td>Tipo de beneficio:</td>
                       <td>
 
-                        <select name="tipo_beneficio">
+                        <select name="tipo_beneficio" id="validar32">
                           
                           <option >Seleccione</option>
                           <option value="ecologico">Ecológico</option>
@@ -700,7 +710,7 @@
                     <tr>
                       <td>Observaciones:</td>
                       <td>
-                        <textarea name="observaciones" rows="4" cols="50" placeholder="Observaciones"></textarea>
+                        <textarea id="observaciones" name="observaciones" rows="4" cols="50" placeholder="Observaciones"></textarea>
                       </td>
                     </tr>
                   
@@ -715,16 +725,21 @@
                         <td>Marquesina</td>
                         <td>
                           
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                        
+                          <input type="radio" name="validar33" value="Si">Sí</input>
+                          <input type="radio" name="validar33" value="No">No</input>
+                            
+                        
                         </td>
                       </tr>
                       <tr>
                         <td>Elba</td>
                         <td>
                           
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                          
+                        <input type="radio" name="validar34" value="Si">Sí</input>
+                        <input type="radio" name="validar34" value="No">No</input>
+                        
                         </td>
                       </tr>
                       <tr>
@@ -733,8 +748,11 @@
                         <td>silo</td>
                         <td>
                           
-                        <input type="radio">Bueno</input>
-                        <input type="radio">Malo</input>
+                        
+                          <input type="radio" name="validar35" value="Si">Sí</input>
+                          <input type="radio" name="validar35" value="No">No</input>
+                          
+
                         </td>
                       </tr>
                       <tr>
@@ -742,34 +760,33 @@
                         <td>Tipo de silo</td>
                         <td>
                           
-                        <input type="radio">Gas</input>
-                        <input type="radio">Carbon</input>                        
-                        <input type="radio">Sisco</input>
+                        <input type="radio" name="validar36" value="Gas">Gas</input>
+                        <input type="radio" name="validar36" value="Carbon">Carbon</input>                        
+                        <input type="radio" name="validar36" value="Sisco">Sisco</input>
                         </td>
                       </tr>
                       <tr>
                         <td>Kit poscosecha</td>
                         <td>
 
-                        <input type="radio">Si</input>
-                        <input type="radio">No</input>
-
+                        
+                          <input type="radio" name="validar37" value="Si">Sí</input>
+                          <input type="radio" name="validar37" value="No">No</input>
+                          
                         </td>
                       </tr>
                       <tr>
                         <td>Capacidad de vol. de secado</td>
-                        <td><label>Suficiente</label></td>
-                        <td><input type="number" placeholder="Suficiente"></td>
+                        <td><input id="suficiente" name="suficiente" type="number" placeholder="Suficiente"></td>
                       </tr>
                       <tr>
                         <td></td>
-                        <td><label>Insuficiente</label></td>
-                        <td><input type="number" placeholder="Insuficiente"></td>
+                        <td><input id="insuficiente" name="insuficiente" type="number" placeholder="insuficiente"></td>
                       </tr>
                       <tr>
                         <td>Observaciones</td>
                         <td>
-                          <textarea></textarea>
+                          <textarea id="observaciones2" name="observaciones2" placeholder="Observaciones"></textarea>
                         </td>
                       </tr>
 
@@ -777,35 +794,38 @@
                       <tr>
                         <td>Bodegas de agroquímicos</td>
                         <td>
-                          <input type="radio">Tiene</input>
-                          <input type="radio">No tiene</input>
 
+                          <input type="radio" name="validar38" value="Tiene">Tiene</input>
+                          <input type="radio" name="validar38" value="No tiene" >No tiene</input>
+                            
                         </td>
                       </tr>
                       <tr>
                         <td>Bodegas de insumos</td>
                         <td>
                         
-                          <input type="radio">Tiene</input>
-                          <input type="radio">No tiene</input>
-  
+                          <input type="radio" name="validar39" value="Tiene">Tiene</input>
+                          <input type="radio" name="validar39" value="No tiene" >No tiene</input>
+                            
                         </td>
                       </tr>
                       <tr>
                         <td>Bodegas de Herramientas</td>
                         <td>
-                          <input type="radio">Tiene</input>
-                          <input type="radio">No tiene</input>
-
+                          
+                          <input type="radio" name="validar40" value="Tiene">Tiene</input>
+                          <input type="radio" name="validar40" value="No tiene" >No tiene</input>
+                            
                         </td>
                       </tr>
                       <tr>
                         <td>Bodegas de pergamino</td>
                         <td>
                           
-                          <input type="radio">Tiene</input>
-                          <input type="radio">No tiene</input>
 
+                          <input type="radio" name="validar42" value="Tiene">Tiene</input>
+                          <input type="radio" name="validar42" value="No tiene" >No tiene</input>
+                            
                         </td>
                       </tr>
                       <tr>
@@ -813,32 +833,35 @@
                         <td>Bodegas seguras</td>
                         <td>
                           
-                          <input type="radio">Si</input>
-                          <input type="radio">No</input>
+                          <input type="radio" name="validar43" value="Si">Sí</input>
+                          <input type="radio" name="validar43" value="No">No</input>
+                         
 
                         <tr>
 
                             <td>Beneficiadero es seguro</td>
                             <td>
                               
-                          <input type="radio">Si</input>
-                          <input type="radio">No</input>
-
+            
+                           
+                          <input type="radio" name="validar44" value="Si">Sí</input>
+                          <input type="radio" name="validar44" value="No">No</input>
+                         
                             <tr>
     
     
                                 <td>Tiene infraestructura del beneficiadero</td>
                                 <td>
                                   
-                          <input type="radio">Si</input>
-                          <input type="radio">No</input>
-
+                          <input type="radio" name="validar45" value="Si">Sí</input>
+                          <input type="radio" name="validar45" value="No">No</input>
+                         
                                 <tr>
         
         
                                     <th>Observaciones</th>
                                     <td>
-                                      <textarea placeholder="Observacion"></textarea>
+                                      <textarea placeholder="Observacion" name="observaciones3" id="observaciones3"></textarea>
                                     </td>
                         
                                   </table>
@@ -850,33 +873,35 @@
 
 
 
-                                 <!-- TABLA DE BAA -->   
+                                <!---------------- TABLA DE BAA ----------------------------------------->   
                                     <table id="tabla-bpa">
                                         <h2>Manejo BPA </h2>
                                         <tr>
                                           <th>Elementos de protección personal</th>
                                           <td>
                                             
-                                                 <input type="radio">Tiene</input>
-                                                <input type="radio">No Tiene</input>
-
+                                            <input type="radio" name="validar46" value="Tiene">Tiene</input>
+                                            <input type="radio" name="validar46" value="No tiene" >No tiene</input>
+                                             
                                           </td>
                                         </tr>
                                         <tr>
                                           <th>Kit antiderrame</th>
                                           <td>
                                             
-                                                 <input type="radio">Si</input>
-                                                 <input type="radio">No</input>
-
+                          <input type="radio" name="validar47" value="Si">Sí</input>
+                          <input type="radio" name="validar47" value="No">No</input>
+                         
                                           </td>
                                         </tr>
                                         <tr>
                                           <th>Extintor</th>
                                           <td>
                                             
-                                                   <input type="radio">Si</input>
-                                                  <input type="radio">No</input>
+                                                   
+                          <input type="radio" name="validar48" value="Si">Sí</input>
+                          <input type="radio" name="validar48" value="No">No</input>
+                         
 
                                           </td>
                                         </tr>
@@ -885,11 +910,13 @@
                                   
                                           <td>
                                       
-                                                       <input type="radio">Si</input>
-                                                         <input type="radio">No</input>
-                                          </td>
+                                          
+                          <input type="radio" name="validar49" value="Si">Sí</input>
+                          <input type="radio" name="validar49" value="No">No</input>
+                         
+                                                        </td>
                                         
-                                          <td><input type="text" placeholder="Especificar"></td>
+                                          <td><input id="especificar"    type="text" placeholder="Especificar"></td>
                                         
                                         </tr>
                                         
@@ -901,36 +928,39 @@
                                           <th> Existen Agroquímicos de la lista naranja FairTrade en el predio</th>
                                           <td>
                                             
-                                                        <input type="radio">Si</input>
-                                                         <input type="radio">No</input>
-                                          </td>
-                                          <td><input type="text" placeholder="Especificar"></td>
+                                          
+                          <input type="radio" name="validar50" value="Si">Sí</input>
+                          <input type="radio" name="validar50" value="No">No</input>
+                         
+                                                        </td>
+                                          <td><input id="especificardos" type="text" placeholder="Especificar"></td>
                                         </tr>
                                         <tr>
                                           <th>Utiliza productos biológicos y orgánicos</th>
                                           <td>
                                             
-                                                      <input type="radio">Si</input>
-                                                           <input type="radio">No</input>
-
+                          <input type="radio" name="validar52" value="Si">Sí</input>
+                          <input type="radio" name="validar52" value="No">No</input>
+                         
                                           </td>
-                                          <td><input type="text" placeholder="Especificar"></td>
+                                          <td><input id="especificartres" type="text" placeholder="Especificar"></td>
                                         </tr>
                                         <tr>
                                           <th>Zona de preparación y dosificación</th>
                                           <td>
                                             
-                                            <input type="radio">Tiene</input>
-                                            <input type="radio">No Tiene</input>
-
+                                            <input type="radio" name="validar53" value="Tiene">Tiene</input>
+                                            <input type="radio" name="validar53" value="No tiene" >No tiene</input>
+                                             
                                           </td>
                                         </tr>
                                         <tr>
                                           <th>Realiza los envases de agroquímicos vacíos para otras actividades de la finca</th>
                                           <td> 
                                             
-                                                   <input type="radio">Si</input>
-                                                  <input type="radio">No</input>
+                                            <input type="radio" name="validar54" value="Si">Sí</input>
+                                            <input type="radio" name="validar54" value="No">No</input>
+                                           
 
                                           </td>
                                         </tr>
@@ -938,37 +968,42 @@
                                           <th>Se separan los agroquímicos de lista roja FairTrade para otros cultivos de café</th>
                                           <td>
                                             
-                                                  <input type="radio">Si</input>
-                                                    <input type="radio">No</input>
-
+                                            <input type="radio" name="listaroja" value="Si">Sí</input>
+                                            <input type="radio" name="listaroja" value="No">No</input>
+                                           
                                             </td>
                                         </tr>
                                         <tr>
 
                                             <th>Cuenta con punto ecologico</th>
                                             <td>
-                                              
-                                                     <input type="radio">Si</input>
-                                                     <input type="radio">No</input>
-                                         
+                                              <input type="radio" name="validar55" value="Si">Sí</input>
+                                              <input type="radio" name="validar55" value="No">No</input>
+                                             
                                                  </td>
                                                  <tr>
 
                                                   <th>En la finca se realiza separacion de residuos reciclables y residuos peligrosos (post consumo)</th>
                                                   <td>
                                                     
-                                                           <input type="radio">Si</input>
-                                                           <input type="radio">No</input>
-                                               
+                                                    <input type="radio" name="validar56" value="Si">Sí</input>
+                                                    <input type="radio" name="validar56" value="No">No</input>
+                                                   
                                                        </td>
                                           </tr>
                                         
                                           <tr>
                                             <th>Finca con potencial para proceso de certificacion</th>
-                                            <td>  <input type="radio">Si</input>
-                                                  <input type="radio">No</input>
-                                                </td><td><input type="text" placeholder="¿ Cual ?"</td>
-                                            </tr>
+                                            <td>   <input type="radio" name="validar57" value="Si">Sí</input>
+                                              <input type="radio" name="validar57" value="No">No</input>
+                                             
+
+
+                                              
+                                            
+                                          </td><td><input id="cual58" name="cual58" type="text" placeholder="¿Cual?" /></td>
+
+                                          </tr>
 
 
 
@@ -976,11 +1011,11 @@
 
                                             <th>Observaciones</th>
                                             <td>
-                                              <textarea placeholder="Observaciones"></textarea>
+                                              <textarea placeholder="Observaciones" name="observaciones" id="observacionescuatro"></textarea>
                                             </td>
         
 
-                                            <table><br>
+                                          </table><br>
                                         
                 <!-------------------------------------------------------------------------------------------------------------------------------------------- - -->
                                     <!-- Tabla de componente ambiental -->
@@ -1029,58 +1064,77 @@
                                         <tbody>
                                          
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                            
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>                                                                                                                                               
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
+                                          
                                           </tr>
 
 
@@ -1088,15 +1142,19 @@
 
 
                                           <tr>
-                                            <td><input type="text" placeholder="Nombre comun" /></td>
-                                            <td><input type="number"  placeholder="Cantidad"/></td>
-                                            <td><input type="number" placeholder="%" /></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text" /></td>
-                                            <td><input type="number" /></td>
-                                            <td><input type="number" /></td>
+                                          
+                                            <td><input type="text" placeholder="Nombre comun" id="validar64"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar65" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar66"/></td>
+                                          
                                           </tr>
 
                                           
@@ -1121,59 +1179,77 @@
                                         </thead>
                                         <tbody>
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
                                           <tr>
-                                            <td><input type="text"  placeholder="Nombre comun"/></td>
-                                            <td><input type="number" placeholder="Cantidad" /></td>
-                                            <td><input type="number"  placeholder="%"/></td>
+                                          
+                                            <td><input type="text"  placeholder="Nombre comun" id="validar60"/></td>
+                                            <td><input type="number" placeholder="Cantidad" id="validar62" /></td>
+                                            <td><input type="number"  placeholder="%" id="validar63"/></td>
+                                          
                                           </tr>
 
                                         </tbody>
@@ -1183,7 +1259,7 @@
 
 
 <!-- ---------------------------------------------------------------------------------------------------------------------------------------------- -->
-
+                                      
                                             <!--Alternativas de manejo de aguas   -->
 
                                             <table id="tabla-aguas">
@@ -1197,81 +1273,81 @@
                                                
                                                 <tr>
                                                   <td>
-                                                    <input type="radio" name="pozo-septico">Pozo sépticos</input>
+                                                    <label name="pozo-septico">Pozo sépticos</label>
                                                   </td>
                                                   <td>
                                                     <label>Tiene</label>
-                                                    <input type="checkbox" placeholder="Tiene">
+                                                    <input type="radio" name="validar67" value="Tiene" >
                                                   </td>
                                                   <td>
                                                     <label>No tiene</label>
-                                                    <input type="checkbox" |||placeholder="No tiene">
+                                                    <input type="radio" name="validar67" value="No tiene" >
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td>
-                                                    <input type="radio" name="resumidero">Resumidero</input>
+                                                    <label name="resumidero">Resumidero</label>
                                                   </td>
                                                   <td>
                                                     <label>Tiene</label>
-                                                    <input type="checkbox" placeholder="Tiene">
+                                                    <input type="radio" name="validar68" value="Tiene">
                                                   </td>
                                                   <td>
                                                     <label>No tiene</label>
-                                                    <input type="checkbox" placeholder="No tiene">
+                                                    <input type="radio" name="validar68" value="No tiene"  >
                                                   </td>
                                                 </tr>
                                               
                                                 <tr>
                                                   <td>
-                                                    <input type="radio" name="proceso-cafe">Proceso beneficio café</input>
+                                                    <label name="proceso-cafe">Proceso beneficio café</label>
                                                   </td>
                                                   <td>
                                                     <label>Tiene</label>
-                                                    <input type="checkbox" placeholder="Tiene">
+                                                    <input type="radio" name="validar69" value="Tiene">
                                                   </td>
                                                   <td>
                                                     <label>No tiene</label>
-                                                    <input type="checkbox" placeholder="No tiene">
+                                                    <input type="radio" name="validar69" value="No tiene">
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td>
-                                                    <input type="radio" name="tratamiento-mieles">Sistema de tratamiento de aguas mieles</input>
+                                                    <label  name="tratamiento-mieles">Sistema de tratamiento de aguas mieles</label>
                                                   </td>
                                                   <td>
                                                     <label>Tiene</label>
-                                                    <input type="checkbox" placeholder="Tiene">
+                                                    <input type="radio" name="validar70" value="Tiene">
                                                   </td>
                                                   <td>
                                                     <label>No tiene</label>
-                                                    <input type="checkbox" placeholder="No tiene">
+                                                    <input type="radio" name="validar70" value="No tiene">
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td>
-                                                    <input type="radio" name="arte-mieles">Sist. Arte de aguas mieles</input>
+                                                    <label  name="arte-mieles">Sist. Arte de aguas mieles</label>
                                                   </td>
                                                   <td>
                                                     <label>Tiene</label>
-                                                    <input type="checkbox" placeholder="Tiene">
+                                                    <input type="radio" name="validar72" value="Tiene">
                                                   </td>
                                                   <td>
                                                     <label>No tiene</label>
-                                                    <input type="checkbox" placeholder="No tiene">
+                                                    <input type="radio" name="validar72" value="No tiene">
                                                   </td>
                                                 </tr>
                                                 <tr>
                                                   <td>
-                                                    <input type="radio" name="residuales-domesticas">Residuales domésticas</input>
+                                                    <label  name="residuales-domesticas">Residuales domésticas</label>
                                                   </td>
                                                   <td>
                                                     <label>Tiene</label>
-                                                    <input type="checkbox" placeholder="Tiene">
+                                                    <input type="radio" name="validar73" value="Tiene">
                                                   </td>
                                                   <td>
                                                     <label>No tiene</label>
-                                                    <input type="checkbox" placeholder="No tiene">
+                                                    <input type="radio" name="validar73" value="No tiene">
                                                   </td>
                                                 </tr>
                                                 <tr>
@@ -1286,42 +1362,42 @@
                                                           <h2>Descarga de aguas residuales beneficio </h2>
                                                           <tr>
                                                             <td>
-                                                              <input type="radio" name="proceso-cafe">Infiltracion al suelo cerca de AAVC</input>
+                                                              <label name="proceso-cafe">Infiltracion al suelo cerca de AAVC</label>
                                                             </td>
                                                             <td>
                                                               <label>Tiene</label>
-                                                              <input type="checkbox" placeholder="No Tiene">
+                                                              <input type="radio" name="validar74" value="Tiene">
                                                             </td>
                                                             <td>
                                                               <label>No tiene</label>
-                                                              <input type="checkbox" placeholder="No tiene">
+                                                              <input type="radio" name="validar74" value="No tiene">
                                                             </td>
 
                                                             <tr>
                                                               <td>
-                                                                <input type="radio" name="proceso-cafe">Infiltracion al suelo</input>
+                                                                <label name="proceso-cafe">Infiltracion al suelo</label>
                                                               </td>
                                                               <td>
                                                                 <label>Tiene</label>
-                                                                <input type="checkbox" placeholder="No Tiene">
+                                                                <input type="radio" name="validar75" value="Tiene">
                                                               </td>
                                                               <td>
                                                                 <label>No tiene</label>
-                                                                <input type="checkbox" placeholder="No tiene">
+                                                                <input type="radio" name="validar75" value="No tiene">
                                                               </td>
   
 
                                                               <tr>
                                                                 <td>
-                                                                  <input type="radio" name="proceso-cafe">Descarga directa a fuentes hidricas</input>
+                                                                  <label name="proceso-cafe">Descarga directa a fuentes hidricas</label>
                                                                 </td>
                                                                 <td>
                                                                   <label>Tiene</label>
-                                                                  <input type="checkbox" placeholder="No Tiene">
+                                                                  <input type="radio" name="validar76" value="Tiene">
                                                                 </td>
                                                                 <td>
                                                                   <label>No tiene</label>
-                                                                  <input type="checkbox" placeholder="No tiene">
+                                                                  <input type="radio" name="validar76" value="No tiene">
                                                                 </td>
 
 
@@ -1333,13 +1409,13 @@
                                                                   </td>
                                                                   <td>
                                                                     <label>Si</label>
-                                                                    <input type="checkbox" placeholder="Tiene">
+                                                                    <input type="radio" name="validar77" value="Si">
                                                                   </td>
                                                                   <td>
                                                                     <label>No</label>
-                                                                    <input type="checkbox" placeholder="No tiene">
+                                                                    <input type="radio" name="validar77" value="No">
                                                                   </td>
-                                                                  <td><input type="text" placeholder="Cuales ?"></td>
+                                                                  <td><input type="text" id="cuales" placeholder="Cuales ?"></td>
                                                                 </tr>
 
 
@@ -1356,11 +1432,11 @@
                                                                   </td>
                                                                   <td>
                                                                     <label>Si</label>
-                                                                    <input type="checkbox" placeholder="Tiene">
+                                                                    <input type="radio" name="validar78" value="Si">
                                                                   </td>
                                                                   <td>
                                                                     <label>No</label>
-                                                                    <input type="checkbox" placeholder="No tiene">
+                                                                    <input type="radio" name="validar78" value="No">
                                                                   </td><br>
                                                                   <tr>
                                                                   
@@ -1369,11 +1445,11 @@
                                                                     </td>
                                                                     <td>
                                                                       <label>Si</label>
-                                                                      <input type="checkbox" placeholder=" No Tiene">
+                                                                      <input type="radio" name="validar79" value="Si">
                                                                     </td>
                                                                     <td>
                                                                       <label>No</label>
-                                                                      <input type="checkbox" placeholder="No tiene">
+                                                                      <input type="radio" name="validar79" value="No">
                                                                     </td><br>
   
 
@@ -1381,25 +1457,28 @@
 
                                                                     <tr>
                                                                       <td>
-                                                                        <label type="radio" name="proceso-cafe"></label>Se han identificado problemas de erosion en la finca
+                                                                        <label name="proceso-cafe">Se han identificado problemas de erosión en la finca</label>
                                                                       </td>
                                                                       <td>
                                                                         <label>Si</label>
-                                                                        <input type="checkbox" placeholder="Tiene">
+                                                                        <input type="radio" name="validar90" value="Si">
                                                                       </td>
                                                                       <td>
                                                                         <label>No</label>
-                                                                        <input type="checkbox" placeholder="No tiene">
-                                                                      
+                                                                        <input type="radio" name="validar90" value="No">
                                                                       </td>
-                                                                      </tr>
+                                                                    </tr>
+                                                                    
+                                                                        
 
 
-                                                                       <tr>
                                                                       <td>
-                                                                        <label type="radio" name="proceso-cafe"></label>Si la respuesta es afirmativa mencione la ubicacion
-                                                                      </td><td><input type="text" placeholder="¿ Ubicacion ?"</td>
-                                                                     
+
+                                                                      
+                                                                    <label type="radio" name="proceso-cafe"></label>Si la respuesta es afirmativa mencione la ubicacion
+                                                                  
+                                                                    </td><td><input type="text" id="validar80" placeholder="¿Ubicacion?" /></td>
+
                                                                     
                                                                     </tr>
                                                                      
@@ -1408,9 +1487,9 @@
 
                                                                         <th>Observaciones</th>
                                                                         <td>
-                                                                          <textarea placeholder="Observacion"></textarea>
+                                                                          <textarea id="observacionessinco" name="observacionessinco" placeholder="Observacion"></textarea>
                                                                         </td>
-  
+                                                                      </td>
 
                                                                       </tr>
                                                                 
@@ -1427,7 +1506,8 @@
     <br>
     <button>Guardar datos</button>
     <button>Ver datos</button>
-    <button>Exportar datos</button>
+    <button onclick="exportar()">Exportar a Excel</button>
+
   
   </th> 
 
