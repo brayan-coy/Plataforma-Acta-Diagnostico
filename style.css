@@ -1,3 +1,8 @@
+/* Marca una opcion de eeror si no se seleciones el radio buton de genero */
+.error {
+  outline: 2px solid red;
+}
+
 #consulta {
   border-collapse: collapse;
   width: 100%;

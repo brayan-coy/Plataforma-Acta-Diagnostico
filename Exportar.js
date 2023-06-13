@@ -1,72 +1,127 @@
 function exportar(event) {
   // Datos capturados de Datos personales
-
+  //Validacion
   const nombres = document.getElementById("nombres").value;
   if (nombres.trim() === "") {
-    alert("Por favor, ingresa tus nombres.");
+    document.getElementById("nombres").focus();
+    document.getElementById("nombres").classList.add("error");
+    alert(" Ingresa los Nombres.");
+  } else {
+    document.getElementById("nombres").classList.remove("error");
   }
+
   const apellidos = document.getElementById("apellidos").value;
   if (apellidos.trim() === "") {
-    alert("Por favor, ingresa tus apellidos.");
+    document.getElementById("apellidos").focus();
+    document.getElementById("apellidos").classList.add("error");
+    alert(" Ingresa los apellidos.");
+  } else {
+    document.getElementById("apellidos").classList.remove("error");
   }
-  const genero = document.querySelector('input[name="genero"]:checked').value;
 
-  if (genero === null) {
-    alert("Por favor, selecciona tipo  género.");
-    return false;
+  const genero = document.querySelector('input[name="genero"]:checked');
+
+  if (!genero) {
+    alert("Por favor, seleccione una opción de género");
   }
+  /*     document.getElementById("masculino").focus();
+    document.getElementById("generos").classList.add("error");
+    return false;
+ */
+  // }
+  /* else document.getElementById("generos").classList.remove("error");
+   */ // Puedes hacer uso de generoValue en otras partes de tu código si es necesario
 
   const cedula = document.getElementById("cedula").value;
   if (cedula.trim() === "") {
-    alert("Por favor, ingresa tu número de cédula.");
+    document.getElementById("cedula").classList.add("error");
+    document.getElementById("cedula").focus();
+    alert("Ingresa tu número de cédula.");
   } else if (!/^\d+$/.test(cedula)) {
     alert("El número de cédula debe contener solo números.");
+  } else {
+    document.getElementById("cedula").classList.remove("error");
   }
 
   const celular = document.getElementById("celular").value;
+
   if (celular.trim() === "") {
+    document.getElementById("celular").focus();
+    document.getElementById("celular").classList.add("error");
+
     alert("Por favor, ingresa tu número de celular.");
   } else if (!/^\d+$/.test(celular)) {
     alert("El número de celular debe contener solo números.");
+  } else {
+    document.getElementById("celular").classList.remove("error");
   }
 
   const codigo_catastral = document.getElementById("codigo_catastral").value;
+  document.getElementById("codigo_catastral").classList.add("error");
 
   if (codigo_catastral.trim() === "") {
+    document.getElementById("codigo_catastral").focus();
+    document.getElementById("codigo_catastral").classList.add("error");
     alert("Por favor, ingresa el código catastral.");
+  } else {
+    document.getElementById("codigo_catastral").classList.remove("error");
   }
 
   const correo_electronico =
     document.getElementById("correo_electronico").value;
   if (correo_electronico.trim() === "") {
+    document.getElementById("correo_electronico").classList.add("error");
+    document.getElementById("correo_electronico").focus();
     alert("Por favor, ingresa tu correo electrónico.");
+  } else {
+    document.getElementById("correo_electronico").classList.remove("error");
   }
-  const nivel_educativo = document.getElementById("nivel_educativo").value;
-  if (nivel_educativo.trim() === "") {
-    alert("Por favor, ingresa tu nivel educativo.");
+
+  const nivelEducativo = document.getElementById("nivel_educativo");
+
+  if (nivelEducativo.value === "Seleccionar") {
+    document.getElementById("nivel_educativo").classList.add("error");
+    alert("Por favor, seleccione un nivel educativo");
+    nivelEducativo.focus();
+    return false;
+  } else {
+    document.getElementById("nivel_educativo").classList.remove("error");
   }
+
   const profesion = document.getElementById("profesion").value;
   if (profesion.trim() === "") {
+    document.getElementById("profesion").focus();
+    document.getElementById("profesion").classList.add("error");
+
     alert("Por favor, ingresa tu profesión.");
+    return false;
+  } else {
+    document.getElementById("profesion").classList.remove("error");
   }
 
   //Validacion de los campos
-
   //Datos de la segunda tabla Acta diagnostico
   const fecha = document.getElementById("fecha").value;
+
   const tipovisita = document.getElementById("tipovisita").value;
+  if (tipovisita.value === "Seleccionar") {
+    alert("Por favor, seleccione un tipo de visita");
+    tipovisita.focus();
+    return false;
+  }
+
   const estatuspredio = document.getElementById("estatuspredio").value;
   const tematratado = document.getElementById("tematratado").value;
 
   //Validacion Acta Diagnostico
-
   if (fecha.trim() === "") {
+    document.getElementById("fecha").focus();
     alert("Por favor, ingresa la fecha.");
-  } else if (tipovisita.trim() === "") {
-    alert("Por favor, selecciona el tipo de visita.");
   } else if (estatuspredio.trim() === "") {
+    document.getElementById("estatuspredio").focus();
     alert("Por favor, selecciona el estatus del predio.");
   } else if (tematratado.trim() === "") {
+    document.getElementById("tematratado").focus();
     alert("Por favor, ingresa el tema tratado.");
   } else {
     // Todas las validaciones pasaron, puedes realizar alguna acción adicional
@@ -92,7 +147,10 @@ function exportar(event) {
   }
 
   // Tablas especis "Informacion"
-  const lotes = document.getElementById("lotes", "lotes2").value;
+  const lotes = document.getElementById("lotes").value;
+  const lotes2 = document.getElementById("lotes2").value;
+  const valores = lotes + ", " + lotes2;
+
   const planta = document.getElementById("planta").value;
   const surco = document.getElementById("surco").value;
   const numeroarboles = document.getElementById("numeroarboles").value;
@@ -101,7 +159,7 @@ function exportar(event) {
   const pendiente = document.getElementById("pendiente").value;
 
   //Validacion especies
-
+  /* 
   if (lotes.trim() === "") {
     alert("Por favor, ingresa el número de lotes.");
   } else if (planta.trim() === "") {
@@ -120,14 +178,14 @@ function exportar(event) {
     // Todas las validaciones pasaron, puedes realizar alguna acción adicional
     // o enviar el formulario, según sea el caso.
   }
-
+ */
   //Tabla otro campo finca
   const altovalor = document.getElementById("altovalor").value;
   const areasoscial = document.getElementById("areasocial").value;
   const areatotal = document.getElementById("areatotal").value;
   const produccion = document.getElementById("produccion").value;
 
-  if (altovalor.trim() === "") {
+  /* if (altovalor.trim() === "") {
     alert("Por favor, ingresa el valor alto.");
   } else if (areasoscial.trim() === "") {
     alert("Por favor, ingresa el área social.");
@@ -139,7 +197,7 @@ function exportar(event) {
     // Todas las validaciones pasaron, puedes realizar alguna acción adicional
     // o enviar el formulario, según sea el caso.
   }
-
+ */
   //Municipio
   const cultivo = document.getElementById("cultivo").value;
   const surcos = document.getElementById("surcos").value;
@@ -151,7 +209,7 @@ function exportar(event) {
 
   //Validacion Municipio
 
-  if (cultivo.trim() === "") {
+  /*   if (cultivo.trim() === "") {
     alert("Por favor, ingresa el tipo de cultivo.");
   } else if (surcos.trim() === "") {
     alert("Por favor, ingresa el número de surcos.");
@@ -169,12 +227,23 @@ function exportar(event) {
     // Todas las validaciones pasaron, puedes realizar alguna acción adicional
     // o enviar el formulario, según sea el caso.
   }
-
+ */
   //Datos variedades
 
   const variedad = document.getElementById("variedad").value;
-  const proceso = document.querySelector('input[name="proceso"]:checked').value;
+
+  const proceso = document.querySelector('input[name="proceso"]:checked');
+  if (!proceso) {
+    alert("Por favor, seleccione una opción de variedad");
+    document.getElementById("naturales").focus();
+    document.getElementById("proceso").classList.add("error");
+    return false;
+  } else {
+    document.getElementById("proceso").classList.remove("error");
+  }
+
   const validar = document.querySelector('input[name="validar"]:checked').value;
+
   const validar2 = document.querySelector(
     'input[name="validar2"]:checked'
   ).value;
@@ -207,48 +276,6 @@ function exportar(event) {
   const cuantos = document.getElementById("cuantos").value;
   const personal = document.getElementById("personal").value;
   const personaltemporal = document.getElementById("personaltemporal").value;
-
-  //Validacion Variedades
-
-  if (variedad.trim() === "") {
-    alert("Por favor, ingresa el valor para variedad.");
-  } else if (!proceso) {
-    alert("Por favor, selecciona una opción para proceso.");
-  } else if (!validar) {
-    alert("Por favor, selecciona una opción para validar.");
-  } else if (!validar2) {
-    alert("Por favor, selecciona una opción para validar2.");
-  } else if (latitud.trim() === "") {
-    alert("Por favor, ingresa el valor para latitud.");
-  } else if (longitud.trim() === "") {
-    alert("Por favor, ingresa el valor para longitud.");
-  } else if (altitud.trim() === "") {
-    alert("Por favor, ingresa el valor para altitud.");
-  } else if (!validar3) {
-    alert("Por favor, selecciona una opción para validar3.");
-  } else if (fecha2.trim() === "") {
-    alert("Por favor, ingresa el valor para fecha2.");
-  } else if (!validar4) {
-    alert("Por favor, selecciona una opción para validar4.");
-  } else if (!validar5) {
-    alert("Por favor, selecciona una opción para validar5.");
-  } else if (!validar6) {
-    alert("Por favor, selecciona una opción para validar6.");
-  } else if (!validar7) {
-    alert("Por favor, selecciona una opción para validar7.");
-  } else if (!validar8) {
-    alert("Por favor, selecciona una opción para validar8.");
-  } else if (rangos.trim() === "") {
-    alert("Por favor, ingresa el valor para rangos.");
-  } else if (!validar9) {
-    alert("Por favor, selecciona una opción para validar9.");
-  } else if (cuantos.trim() === "") {
-    alert("Por favor, ingresa el valor para cuantos.");
-  } else if (personal.trim() === "") {
-    alert("Por favor, ingresa el valor para personal.");
-  } else if (personaltemporal.trim() === "") {
-    alert("Por favor, ingresa el valor para personaltemporal.");
-  }
 
   //TablaInfraestructura
   const validar20 = document.querySelector(
@@ -636,7 +663,10 @@ function exportar(event) {
       municipio: ciudades,
 
       //Datos de informacion especies
-      lotes: lotes,
+      /* lotes: lotes,
+      lotes2, */
+      lotes: valores,
+
       planta: planta,
       surco: surco,
       numeroarboles: numeroarboles,

@@ -47,53 +47,57 @@
         <tbody>
           <tr>
             <td><label for="nombres">Nombres:</label></td>
-            <td><input type="text" id="nombres" required name="nombres" placeholder="Ingrese sus nombres" ></td>
+            <td><input type="text" id="nombres"  name="nombres" placeholder="Ingrese sus nombres" autofocus required ></td>
           </tr>
+          
           <tr>
             <td><label for="apellidos">Apellidos:</label></td>
-            <td><input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos"></td>
+            <td><input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" autofocus required></td>
           </tr>
+         
           <tr>
-            <td>Genero:</td>
+            <td>Género:</td>
             <td>
-              <label><input type="radio" name="genero" value="Femenino" >Femenino</label>
-              <label><input type="radio" name="genero" value="Masculino" >Masculino</label>
+              <label><input type="radio" name="genero" value="Femenino">Femenino</label>
+              <label><input type="radio" name="genero" value="Masculino">Masculino</label>
             </td>
           </tr>
+          
+          
+          
           <tr>
             <td><label for="cedula">Número de cédula:</label></td>
-            <td><input type="text" id="cedula" name="cedula" placeholder="Ingrese su número de cédula"></td>
+            <td><input type="text" id="cedula" required name="cedula" placeholder="Ingrese su número de cédula" autofocus required></td>
           </tr>
           <tr>
             <td><label for="celular">Número de celular:</label></td>
-            <td><input type="text" id="celular" name="celular" placeholder="Ingrese su número de celular"></td>
+            <td><input type="text" id="celular" name="celular" placeholder="Ingrese su número de celular" autofocus required></td>
           </tr>
           <tr>
             <td><label for="codigo_catastral">Código catastral:</label></td>
-            <td><input type="text" id="codigo_catastral" name="codigo_catastral" placeholder="Ingrese su código catastral"></td>
+            <td><input type="text" id="codigo_catastral" name="codigo_catastral" placeholder="Ingrese su código catastral" autofocus required></td>
          
-
         </tr>
         <tr>
           <td><label for="correo_electronico">Correo electrónico:</label></td>
-          <td><input type="email" id="correo_electronico" name="correo_electronico" placeholder="Ingrese su correo electrónico"></td>
+          <td><input type="email" id="correo_electronico" name="correo_electronico" placeholder="Ingrese su correo electrónico" autofocus required></td>
         </tr>
         <tr>
           <td><label for="nivel_educativo">Nivel educativo:</label></td>
           <td>
-            <select id="nivel_educativo" name="nivel_educativo">
-              <option>Seleccionar</option>
-              <option value="ninguno">No tiene estudios</option>
-              <option value="bachiller">Bachiller</option>
-              <option value="tecnologo">Tecnólogo</option>
-              <option value="universitario">Universitario</option>
-              <option value="doctorado">Doctorado</option>
+            <select id="nivel_educativo" name="nivel_educativo" autofocus required >
+              <option disabled selected >Seleccionar</option>
+              <option value="ninguno" >No tiene estudios</option>
+              <option value="bachiller" >Bachiller</option>
+              <option value="tecnologo" >Tecnólogo</option>
+              <option value="universitario" >Universitario</option>
+              <option value="doctorado" >Doctorado</option>
             </select>
           </td>
         </tr>
         <tr>
           <td><label for="profesion">Profesión:</label></td>
-          <td><input type="text" id="profesion" name="profesion" placeholder="Ingrese su profesión"></td>
+          <td><input type="text" id="profesion" name="profesion" placeholder="Ingrese su profesión" autofocus required></td>
         </tr>
     
     
@@ -124,8 +128,8 @@
     <tr>
       <th>Tipo de visita</th>
       <td>
-        <select  id="tipovisita">
-          <option>Seleccionar</option>
+        <select id="tipovisita" name="tipovisita" autofocus required>
+          <option disabled selected>Seleccionar</option>
           <option value="Implentacion">Implentacion</option>
           <option value="Seguimiento">Seguimiento</option>
           <option value="Solicitud">Solicitud</option>
@@ -133,12 +137,13 @@
         </select>
       </td>
     </tr>
+    
   
     <tr>
       <th>Estatus del predio</th>
       <td>
-        <select id="estatuspredio">
-          <option>Seleccionar</option>
+        <select id="estatuspredio" autofocus required>
+          <option disabled selected>Seleccionar</option>
           <option value="Convencional">Convesional</option>
           <option value="t1">T1</option>
           <option value="t2">T2</option>
@@ -228,7 +233,7 @@
       <td><input type="number" id="pendiente" placeholder="Pendiente"/></td>
     </tr>
     <tr>
-      <td><input type="number" id="lotes2"  name="lotes" placeholder="Lotes"/></td>
+      <td><input type="number" id="lotes2"  name="lotes2" placeholder="Lotes"/></td>
       <td><input type="number"id="planta" name="planta" placeholder="planta" /></td>
       <td><input type="number" id="surco" name="surco" placeholder="surco"/></td>
       <td><input type="number" id="numeroarboles" name="numeroarboles" placeholder="numero-arboles"/></td>
@@ -399,20 +404,23 @@
           </td>
         </tr>
         <tr>
-        </tr>
+
+
         <tr>
-          <th>procesocafe</th>
+          <th id="proceso" name="proceso">procesocafe</th>
           <td>
-           
-            <input type="radio" name="proceso" value="Naturales ">Naturales 
+            <input type="radio" name="proceso" value="Naturales" id="naturales">Naturales 
             <input type="radio" name="proceso" value="Honey">Honey
             <input type="radio" name="proceso" value="Fermentación-controlada">Fermentacion controlada
             <input type="radio" name="proceso" value="LavadoTradicional">Lavado-tradicional
-        
           </td>
         </tr>
+        
+
+
+
         <tr>
-          <th>Cuenta con mapa de la finca</th>
+          <th id="mapa" name="mapa">Cuenta con mapa de la finca</th>
           <td>
     
               <input type="radio" name="validar" value="Si">Sí</input>
